@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>我的错题本 · 高中全科</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📕</text></svg>">
+<style>
+  /* ============ 设计令牌（与高考图谱同一套视觉语言：清华紫 + 紫偏中性色） ============ */
+  :root {
+    --ground:#f6f5f9; --surface:#ffffff; --surface-2:#f1eef7;
+    --ink:#1b1930; --ink-mute:#605a75; --ink-faint:#8f89a3;
+    --border:#e5e1ee; --border-strong:#d3cce2;
+    --accent:#7d2b8f; --accent-soft:#efe2f4; --accent-line:#c79ad4;
+    --wrong:#c0392b; --wrong-soft:#fbe9e7;
+    --right:#2f8f5b; --right-soft:#e6f4ec;
+    --gold:#a9772e;
+    --shadow:0 1px 2px rgba(27,25,48,.05),0 8px 24px rgba(27,25,48,.06);
+    --radius:12px;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --ground:#131120; --surface:#1b1830; --surface-2:#221e3a;
+      --ink:#ece9f5; --ink-mute:#a49dbb; --ink-faint:#7a7391;
+      --border:#2b2745; --border-strong:#3a3457;
+      --accent:#bd7ad4; --accent-soft:#2e2140; --accent-line:#5a3b6e;
+      --wrong:#e0645a; --wrong-soft:#3a211e;
+      --right:#52b57e; --right-soft:#1c2f26;
+      --gold:#d3a75c;
+      --shadow:0 1px 2px rgba(0,0,0,.3),0 10px 30px rgba(0,0,0,.35);
+    }
+  }
+  :root[data-theme="light"]{--ground:#f6f5f9;--surface:#fff;--surface-2:#f1eef7;--ink:#1b1930;--ink-mute:#605a75;--ink-faint:#8f89a3;--border:#e5e1ee;--border-strong:#d3cce2;--accent:#7d2b8f;--accent-soft:#efe2f4;--accent-line:#c79ad4;--wrong:#c0392b;--wrong-soft:#fbe9e7;--right:#2f8f5b;--right-soft:#e6f4ec;--gold:#a9772e;--shadow:0 1px 2px rgba(27,25,48,.05),0 8px 24px rgba(27,25,48,.06);}
+  :root[data-theme="dark"]{--ground:#131120;--surface:#1b1830;--surface-2:#221e3a;--ink:#ece9f5;--ink-mute:#a49dbb;--ink-faint:#7a7391;--border:#2b2745;--border-strong:#3a3457;--accent:#bd7ad4;--accent-soft:#2e2140;--accent-line:#5a3b6e;--wrong:#e0645a;--wrong-soft:#3a211e;--right:#52b57e;--right-soft:#1c2f26;--gold:#d3a75c;--shadow:0 1px 2px rgba(0,0,0,.3),0 10px 30px rgba(0,0,0,.35);}
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    --sans:-apple-system,"PingFang SC","Noto Sans SC","Helvetica Neue",sans-serif;
+    --serif:"Songti SC","Noto Serif SC",Georgia,serif;
+    background: var(--ground); color: var(--ink);
+    font-family: var(--sans); line-height: 1.65;
+    -webkit-font-smoothing: antialiased; padding: 0 18px 70px;
+  }
+  .wrap { max-width: 860px; margin: 0 auto; }
+
+  /* 页眉 */
+  header { padding: 40px 0 10px; }
+  .eyebrow { font-size:12px; letter-spacing:.3em; text-transform:uppercase; color:var(--accent); font-weight:700; margin-bottom:12px; }
+  h1 { font-family:var(--serif); font-size:clamp(28px,5vw,40px); font-weight:700; letter-spacing:.01em; margin-bottom:10px; }
+  .sub { color:var(--ink-mute); font-size:14px; max-width:56ch; }
+  .sub b { color:var(--ink); }
+
+  /* 统计条 */
+  .stats { display:flex; gap:22px; margin-top:18px; flex-wrap:wrap; }
+  .stat .n { font-family:var(--serif); font-size:26px; font-weight:700; color:var(--accent); font-variant-numeric:tabular-nums; }
+  .stat .l { font-size:12px; color:var(--ink-faint); }
+
+  /* 科目筛选 */
+  .filters { display:flex; gap:8px; flex-wrap:wrap; margin:26px 0 20px; }
+  .chip {
+    font-family:inherit; font-size:13px; cursor:pointer;
+    background:var(--surface); color:var(--ink-mute);
+    border:1px solid var(--border); border-radius:20px; padding:6px 14px;
+    transition:.12s; display:flex; align-items:center; gap:6px;
+  }
+  .chip:hover { border-color:var(--accent-line); }
+  .chip.on { background:var(--accent); color:#fff; border-color:var(--accent); }
+  .chip .cnt { font-size:11px; opacity:.7; font-variant-numeric:tabular-nums; }
+  .chip.on .cnt { opacity:.85; }
+
+  /* 错题卡 */
+  .entries { display:grid; gap:14px; }
+  .empty { text-align:center; color:var(--ink-faint); font-size:14px; padding:40px 0; }
+  .card {
+    background:var(--surface); border:1px solid var(--border);
+    border-left:4px solid var(--accent); border-radius:var(--radius);
+    box-shadow:var(--shadow); padding:18px 20px; position:relative;
+  }
+  .card .top { display:flex; align-items:center; gap:10px; margin-bottom:12px; }
+  .card .subj-tag { font-size:12px; font-weight:700; color:var(--accent); background:var(--accent-soft); padding:3px 10px; border-radius:6px; }
+  .card .date { font-size:12px; color:var(--ink-faint); font-variant-numeric:tabular-nums; }
+  .card .del {
+    margin-left:auto; background:none; border:none; cursor:pointer;
+    color:var(--ink-faint); font-size:18px; line-height:1; padding:4px; border-radius:6px;
+  }
+  .card .del:hover { color:var(--wrong); background:var(--wrong-soft); }
+  .q { font-size:15px; font-weight:600; margin-bottom:12px; white-space:pre-wrap; word-break:break-word; }
+  .ans { display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-bottom:12px; }
+  @media (max-width:520px){ .ans { grid-template-columns:1fr; } }
+  .ans .box { border-radius:8px; padding:9px 12px; font-size:14px; }
+  .ans .mine { background:var(--wrong-soft); }
+  .ans .right { background:var(--right-soft); }
+  .ans .lbl { font-size:11px; font-weight:700; letter-spacing:.05em; margin-bottom:2px; }
+  .ans .mine .lbl { color:var(--wrong); }
+  .ans .right .lbl { color:var(--right); }
+  .ans .val { color:var(--ink); word-break:break-word; }
+  .why, .fix { font-size:13.5px; padding:10px 12px; border-radius:8px; margin-top:8px; }
+  .why { background:var(--surface-2); }
+  .fix { border:1px dashed var(--accent-line); }
+  .why .k, .fix .k { font-weight:700; margin-right:6px; }
+  .why .k { color:var(--wrong); }
+  .fix .k { color:var(--accent); }
+  .why .v, .fix .v { color:var(--ink-mute); }
+
+  /* 添加区 */
+  .addbar { margin:30px 0 16px; display:flex; gap:10px; flex-wrap:wrap; }
+  button.action {
+    font-family:inherit; font-size:14px; cursor:pointer; font-weight:600;
+    border-radius:9px; padding:10px 18px; transition:.12s; border:1px solid var(--border);
+    background:var(--surface); color:var(--ink);
+  }
+  button.action:hover { border-color:var(--accent-line); }
+  button.primary { background:var(--accent); color:#fff; border-color:var(--accent); }
+  button.primary:hover { filter:brightness(1.08); }
+
+  .form {
+    background:var(--surface); border:1px solid var(--border-strong);
+    border-radius:var(--radius); padding:20px; box-shadow:var(--shadow);
+    display:none; grid-template-columns:1fr 1fr; gap:14px; margin-bottom:16px;
+  }
+  .form.open { display:grid; }
+  .form .full { grid-column:1/-1; }
+  .form label { font-size:12px; font-weight:700; color:var(--ink-mute); display:block; margin-bottom:5px; }
+  .form input, .form textarea, .form select {
+    width:100%; font-family:inherit; font-size:14px; color:var(--ink);
+    background:var(--ground); border:1px solid var(--border); border-radius:8px; padding:9px 11px; resize:vertical;
+  }
+  .form input:focus, .form textarea:focus, .form select:focus { outline:2px solid var(--accent-line); border-color:transparent; }
+  .form textarea { min-height:52px; }
+  .form .btns { grid-column:1/-1; display:flex; gap:10px; }
+  @media (max-width:520px){ .form { grid-template-columns:1fr; } }
+
+  .tip { font-size:12.5px; color:var(--ink-faint); margin-top:6px; line-height:1.6; }
+  .tip b { color:var(--ink-mute); }
+
+  dialog { border:none; border-radius:12px; padding:0; max-width:90vw; background:transparent; }
+  dialog::backdrop { background:rgba(10,8,20,.6); }
+  .modal { background:var(--surface); color:var(--ink); border-radius:12px; padding:22px; width:520px; max-width:90vw; box-shadow:var(--shadow); }
+  .modal h3 { margin-bottom:10px; }
+  .modal textarea { width:100%; min-height:180px; font-family:ui-monospace,Menlo,monospace; font-size:12px; background:var(--ground); color:var(--ink); border:1px solid var(--border); border-radius:8px; padding:10px; }
+  .modal .btns { display:flex; gap:10px; margin-top:12px; justify-content:flex-end; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <div class="eyebrow">错题本 · 冲刺清华的核武器</div>
+    <h1>我的错题本</h1>
+    <p class="sub">这里记的不是"抄题"，而是<b>"我当时是怎么想错的"</b>。每周把旧错题重做一遍，直到不再错——三年下来，等于给自己造了一套只针对你弱点的题库。</p>
+    <div class="stats">
+      <div class="stat"><div class="n" id="statTotal">0</div><div class="l">总错题数</div></div>
+      <div class="stat"><div class="n" id="statSubj">0</div><div class="l">涉及科目</div></div>
+      <div class="stat"><div class="n" id="statWeek">0</div><div class="l">最薄弱科目</div></div>
+    </div>
+  </header>
+
+  <div class="filters" id="filters"></div>
+
+  <div class="addbar">
+    <button class="action primary" id="toggleAdd">＋ 添加错题</button>
+    <button class="action" id="exportBtn">导出备份</button>
+    <button class="action" id="importBtn">导入备份</button>
+  </div>
+
+  <div class="form" id="addForm">
+    <div class="full">
+      <label>科目</label>
+      <select id="fSubj"></select>
+    </div>
+    <div class="full">
+      <label>题目（把题干和选项一起贴进来）</label>
+      <textarea id="fQ" placeholder="例：It was the first time that he ___ abroad. A. went B. had gone ..."></textarea>
+    </div>
+    <div>
+      <label>我的错误答案</label>
+      <input id="fMine" placeholder="例：A. went">
+    </div>
+    <div>
+      <label>正确答案</label>
+      <input id="fRight" placeholder="例：C. had gone">
+    </div>
+    <div class="full">
+      <label>错在哪一步（我当时的错误思路）</label>
+      <textarea id="fWhy" placeholder="例：只按'出国是过去的事'选了一般过去时，没认出这是固定句型"></textarea>
+    </div>
+    <div class="full">
+      <label>正确思路 / 该记的规则</label>
+      <textarea id="fFix" placeholder="例：It is/was the first time that + 主语 + has/had done。看到就锁定完成时。"></textarea>
+    </div>
+    <div class="btns">
+      <button class="action primary" id="saveBtn">保存</button>
+      <button class="action" id="cancelBtn">取消</button>
+    </div>
+  </div>
+
+  <div class="entries" id="entries"></div>
+
+  <p class="tip" style="margin-top:26px">
+    <b>数据存在哪：</b>所有错题保存在你这台设备的浏览器里，不会上传，关掉页面也不会丢。
+    换设备或想备份，用上面的「导出备份」把内容复制下来。
+  </p>
+
+</div>
+
+<dialog id="ioDialog"><div class="modal">
+  <h3 id="ioTitle">导出备份</h3>
+  <p class="tip" id="ioHint" style="margin-bottom:10px"></p>
+  <textarea id="ioText"></textarea>
+  <div class="btns">
+    <button class="action" id="ioClose">关闭</button>
+    <button class="action primary" id="ioAction">复制</button>
+  </div>
+</div></dialog>
+
+<script>
+/* ================= 数据层 ================= */
+const SUBJECTS = ['语文','数学','英语','物理','化学','生物','政治','历史','地理'];
+const KEY = 'my_mistake_book_v1';
+
+// 首次打开时，用今天真实答错的英语题作为种子（之后所有增删都存在浏览器里）
+const SEED = [
+  {
+    id: 1, subject:'英语', date:'2026-07-22',
+    q:'It was the first time that he ______ abroad; everything looked new to him.\nA. went　B. has gone　C. had gone　D. goes',
+    mine:'A. went',
+    right:'C. had gone',
+    why:'只按"出国是过去的事"选了一般过去时，没认出这是固定句型。',
+    fix:'固定句型：It is/was the first/second time that + 主语 + has/had done。前面是 was 就配 had done（过去的过去）。看到 "the first time that..." 立刻锁定完成时，别用一般过去时。'
+  },
+  {
+    id: 2, subject:'英语', date:'2026-07-22',
+    q:'中译英：为了赶上末班车，他跑得飞快。',
+    mine:'He runs quickly to catch the last bus.',
+    right:'He ran as fast as he could to catch the last bus.',
+    why:'中译英前没判断时态，用了现在时 runs；"飞快"用 quickly 力度也不够。',
+    fix:'翻译前先问一句"这是什么时候的事"——过去的场景用 ran。强调"拼命跑"可用 as fast as he could，比 quickly 有力。'
+  },
+  {
+    id: 3, subject:'英语', date:'2026-07-22',
+    q:'中译英：我到家的时候，妈妈已经做好了晚饭。',
+    mine:'By the time I got home, my mother had cooked the dinner.',
+    right:'By the time I got home, my mother had cooked dinner.',
+    why:'dinner 前多加了 the。',
+    fix:'三餐名词 breakfast / lunch / dinner 前一般不加冠词：have dinner、cook dinner。（过去完成 had cooked 这里用得对，值得表扬。）'
+  },
+];
+
+let data = load();
+let filter = 'all';
+
+function load() {
+  try {
+    const raw = localStorage.getItem(KEY);
+    if (raw === null) { localStorage.setItem(KEY, JSON.stringify(SEED)); return SEED.slice(); }
+    return JSON.parse(raw);
+  } catch (e) { return SEED.slice(); }
+}
+function save() { try { localStorage.setItem(KEY, JSON.stringify(data)); } catch (e) {} }
+
+/* ================= 渲染 ================= */
+const $ = id => document.getElementById(id);
+
+function render() {
+  // 统计
+  $('statTotal').textContent = data.length;
+  const bySubj = {};
+  for (const e of data) bySubj[e.subject] = (bySubj[e.subject] || 0) + 1;
+  $('statSubj').textContent = Object.keys(bySubj).length;
+  let worst = '—', worstN = 0;
+  for (const s in bySubj) if (bySubj[s] > worstN) { worstN = bySubj[s]; worst = s; }
+  $('statWeek').textContent = worst;
+  $('statWeek').style.fontSize = '20px';
+
+  // 筛选条
+  const f = $('filters');
+  f.innerHTML = '';
+  const mk = (key, label, cnt) => {
+    const b = document.createElement('button');
+    b.className = 'chip' + (filter === key ? ' on' : '');
+    b.innerHTML = `${label} <span class="cnt">${cnt}</span>`;
+    b.onclick = () => { filter = key; render(); };
+    f.appendChild(b);
+  };
+  mk('all', '全部', data.length);
+  for (const s of SUBJECTS) if (bySubj[s]) mk(s, s, bySubj[s]);
+
+  // 错题卡
+  const box = $('entries');
+  const list = data.filter(e => filter === 'all' || e.subject === filter)
+                   .slice().reverse();
+  if (!list.length) {
+    box.innerHTML = `<div class="empty">这个科目还没有错题。<br>答错了就点上面「＋ 添加错题」记下来 —— 越早开始，这本武器越厉害。</div>`;
+    return;
+  }
+  box.innerHTML = '';
+  for (const e of list) {
+    const card = document.createElement('div');
+    card.className = 'card';
+    card.innerHTML = `
+      <div class="top">
+        <span class="subj-tag">${esc(e.subject)}</span>
+        <span class="date">${esc(e.date || '')}</span>
+        <button class="del" title="删除这道错题" data-id="${e.id}">✕</button>
+      </div>
+      <div class="q">${esc(e.q)}</div>
+      <div class="ans">
+        <div class="box mine"><div class="lbl">我的错答</div><div class="val">${esc(e.mine)}</div></div>
+        <div class="box right"><div class="lbl">正确答案</div><div class="val">${esc(e.right)}</div></div>
+      </div>
+      ${e.why ? `<div class="why"><span class="k">错因</span><span class="v">${esc(e.why)}</span></div>` : ''}
+      ${e.fix ? `<div class="fix"><span class="k">正确思路</span><span class="v">${esc(e.fix)}</span></div>` : ''}
+    `;
+    box.appendChild(card);
+  }
+  box.querySelectorAll('.del').forEach(b => b.onclick = () => delEntry(+b.dataset.id));
+}
+
+function esc(s) {
+  return String(s == null ? '' : s)
+    .replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;')
+    .replace(/"/g,'&quot;').replace(/\n/g,'<br>');
+}
+
+/* ================= 增 / 删 ================= */
+function delEntry(id) {
+  if (!confirm('确定删除这道错题吗？')) return;
+  data = data.filter(e => e.id !== id);
+  save(); render();
+}
+
+function addEntry() {
+  const q = $('fQ').value.trim();
+  const mine = $('fMine').value.trim();
+  const right = $('fRight').value.trim();
+  if (!q || !right) { alert('至少要填「题目」和「正确答案」。'); return; }
+  data.push({
+    id: Date.now(),
+    subject: $('fSubj').value,
+    date: new Date().toISOString().slice(0,10),
+    q, mine: mine || '（未填）', right,
+    why: $('fWhy').value.trim(),
+    fix: $('fFix').value.trim(),
+  });
+  save();
+  ['fQ','fMine','fRight','fWhy','fFix'].forEach(id => $(id).value = '');
+  $('addForm').classList.remove('open');
+  filter = 'all'; render();
+}
+
+/* ================= 交互接线 ================= */
+function initForm() {
+  const sel = $('fSubj');
+  sel.innerHTML = SUBJECTS.map(s => `<option>${s}</option>`).join('');
+  $('toggleAdd').onclick = () => $('addForm').classList.toggle('open');
+  $('cancelBtn').onclick = () => $('addForm').classList.remove('open');
+  $('saveBtn').onclick = addEntry;
+
+  // 导出 / 导入
+  const dlg = $('ioDialog');
+  $('exportBtn').onclick = () => {
+    $('ioTitle').textContent = '导出备份';
+    $('ioHint').textContent = '把下面全部内容复制保存起来（比如发到微信文件传输助手）。换设备时用「导入备份」粘回去即可。';
+    $('ioText').value = JSON.stringify(data, null, 2);
+    $('ioText').readOnly = true;
+    $('ioAction').textContent = '复制';
+    $('ioAction').onclick = () => {
+      $('ioText').select();
+      try { document.execCommand('copy'); } catch(e){}
+      $('ioAction').textContent = '已复制✓';
+    };
+    dlg.showModal();
+  };
+  $('importBtn').onclick = () => {
+    $('ioTitle').textContent = '导入备份';
+    $('ioHint').textContent = '把之前导出的内容粘贴进来，点「覆盖导入」。注意：这会替换掉当前所有错题。';
+    $('ioText').value = '';
+    $('ioText').readOnly = false;
+    $('ioAction').textContent = '覆盖导入';
+    $('ioAction').onclick = () => {
+      try {
+        const arr = JSON.parse($('ioText').value);
+        if (!Array.isArray(arr)) throw 0;
+        data = arr; save(); render(); dlg.close();
+      } catch(e) { alert('内容格式不对，请粘贴完整的导出备份。'); }
+    };
+    dlg.showModal();
+  };
+  $('ioClose').onclick = () => dlg.close();
+}
+
+initForm();
+render();
+</script>
+</body>
+</html>
