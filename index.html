@@ -310,7 +310,14 @@ function load() {
   try {
     const raw = localStorage.getItem(KEY);
     if (raw === null) { localStorage.setItem(KEY, JSON.stringify(SEED)); return SEED.slice(); }
-    return JSON.parse(raw);
+    const stored = JSON.parse(raw);
+    if (!Array.isArray(stored)) return SEED.slice();
+    // 自动合并：把源码里新增、但本地还没有的种子错题补进来（按 id 去重，
+    // 不动用户已有的错题和勾选状态）。这样每次更新源码 push 后，刷新即可看到新题。
+    const ids = new Set(stored.map(x => x.id));
+    const fresh = SEED.filter(s => !ids.has(s.id));
+    if (fresh.length) { const merged = stored.concat(fresh); localStorage.setItem(KEY, JSON.stringify(merged)); return merged; }
+    return stored;
   } catch (e) { return SEED.slice(); }
 }
 function save() { try { localStorage.setItem(KEY, JSON.stringify(data)); } catch (e) {} }
