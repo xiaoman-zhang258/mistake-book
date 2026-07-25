@@ -277,6 +277,30 @@ const SEED = [
     why:'答得太笼统，写成「细胞」。噬菌体是专门寄生在细菌里的病毒。',
     fix:'看名字拆字：「噬菌体」的「菌」= 细菌，「噬」= 吞噬，所以是「专门感染细菌的病毒」（如大肠杆菌噬菌体）。答病毒宿主要具体到「细菌」，不能只说「细胞」。'
   },
+  {
+    id: 7, subject:'英语', date:'2026-07-25',
+    q:'定语从句填关系词：The house ____ windows face south is warm in winter.',
+    mine:'that',
+    right:'whose',
+    why:'把「房子的窗户」这个所有格关系当成了主/宾关系，填了 that；还误以为 whose 只能指人。',
+    fix:'能翻成「……的（东西）」就用 whose，而且 whose 既能指人也能指物：the house whose windows…=房子的窗户。判断法：先看关系词在从句里是不是「所有格（…的）」，是就用 whose，跟先行词是人是物无关。'
+  },
+  {
+    id: 8, subject:'英语', date:'2026-07-25',
+    q:'指代整个主句时 as 还是 which：① Water, ____ we call H₂O, is essential. ② He said he had read it, ____ was a lie.',
+    mine:'两处都填 as',
+    right:'两处都填 which',
+    why:'一看到「指代整句」就条件反射填 as。其实 as 只用于固定的「正如」评论套路，其余一律 which。',
+    fix:'一刀切判断法：把空替换成中文「正如……」，读得通才用 as（as we know / as is reported / as expected / as is the case），读不通就用 which。「正如是个谎言」不通→which；「正如我们所料 as we expected」通→as。默认中性指代都用 which。'
+  },
+  {
+    id: 9, subject:'英语', date:'2026-07-25',
+    q:'定语从句填关系词：The old man ____ we spoke just now is a famous scientist.（speak to sb）',
+    mine:'whom',
+    right:'to whom（或 whom … we spoke to）',
+    why:'只填了 whom，忘了动词是 speak TO sb，把介词 to 丢了，句子缺了介词。',
+    fix:'spoke to / talk to / look at / listen to 这类「动词+介词」，关系词要么带介词前置（to whom we spoke），要么把介词留在句尾（whom we spoke to）。填空前先想清楚这个动词后面跟不跟介词，别把介词漏掉。'
+  },
 ];
 
 let data = load();
