@@ -301,6 +301,30 @@ const SEED = [
     why:'只填了 whom，忘了动词是 speak TO sb，把介词 to 丢了，句子缺了介词。',
     fix:'spoke to / talk to / look at / listen to 这类「动词+介词」，关系词要么带介词前置（to whom we spoke），要么把介词留在句尾（whom we spoke to）。填空前先想清楚这个动词后面跟不跟介词，别把介词漏掉。'
   },
+  {
+    id: 10, subject:'英语', date:'2026-07-26',
+    q:'名词性从句：为什么一个用 that、一个用 what？能不能对调？\n① I believe ____ he is right.（that）\n② I believe ____ he said.（what）',
+    mine:'he is right 成分完整所以用 that；what 后面是名词性从句，所以不能换。',
+    right:'①用 that 因为从句 he is right 成分完整；②用 what 因为 he said 后面缺宾语，what 要跳进去补上（what = the thing that）。',
+    why:'that 那一半理由说对了，what 那一半用「后面是名词性从句」搪塞——可两句都是名词性从句，这根本不构成区分标准，说明当时只记住了结论没抓住原理。',
+    fix:'一把尺子量到底：用手指盖住引导词，只读后半句，数成分。从句缺成分 → 用有意义、能当成分的词去补（what/who/which）；从句不缺 → 用不作成分的 that。这条规则同时管宾语从句、主语从句、表语从句、同位语从句和定语从句。'
+  },
+  {
+    id: 11, subject:'英语', date:'2026-07-26',
+    q:'判断是同位语从句还是定语从句：\n(a) I have no idea that he will leave tomorrow.\n(b) The idea that he put forward is useful.',
+    mine:'(a) 定语从句　(b) 同位语从句',
+    right:'(a) 同位语从句　(b) 定语从句（正好判反了）',
+    why:'靠「看起来像不像在修饰名词」的语感去猜，没有动手数从句成分，结果两个全反。',
+    fix:'还是数成分：(a) he will leave tomorrow 主谓状齐全，不缺 → that 只作连接 → 同位语从句；(b) he put forward 后面缺宾语 → that 进去当宾语 → 定语从句。辅助验证：翻成「……的想法/消息」说得通就是同位语（他明天要走这个想法 ✓；他提出这个想法 ✗，idea 不等于「他提出」）。'
+  },
+  {
+    id: 12, subject:'英语', date:'2026-07-26',
+    q:'主语从句填空：____ breaks the rule will be punished, no matter who he is.',
+    mine:'That',
+    right:'Whoever（= Anyone who / He who）',
+    why:'没注意到从句 breaks 前面根本没有主语。that 永远不作成分，只能引导「不缺零件」的从句，这里从句缺主语，that 一填进去就没人当主语了。',
+    fix:'缺主语就要用能自己当主语的引导词：whoever / whatever / whichever（自带先行词，= anyone who / anything that）。另记高频陷阱：no matter who 只能引导让步状语从句，绝不能作主语或宾语——Whoever breaks the rule will be punished ✓；No matter who you are, you must obey ✓。口诀：-ever 能当主宾语，no matter 只会让步。'
+  },
 ];
 
 let data = load();
