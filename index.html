@@ -349,6 +349,30 @@ const SEED = [
     why:'循环论证——用结论去解释结论，等于没回答（像问「他为什么高」答「因为他个子高」）。而且这题前一天答对过（当时答「因为膜两边都是水」），隔天就忘了，说明听懂了但没记住。',
     fix:'答「为什么」类问答题的硬规矩：答案里必须出现真正的原因，且原因不能是问题本身的换句话说。本题的完整因果链要背：头亲水尾疏水 + 膜内外都是水 → 尾对尾朝内、头朝外 → 双分子层。'
   },
+  {
+    id: 16, subject:'英语', date:'2026-07-27',
+    q:'改错（两次同类）：① He has come back for two weeks. ② My grandpa has died for three years.',
+    mine:'① He has come back two weeks ago.　② My grandpa has been died for three years.',
+    right:'① He has been back for two weeks.　② My grandpa has been dead for three years.',
+    why:'①病根没找对：come 是短暂动词，不能跟 for+时间段（不可能「回来」持续两周），改成 ago 反而制造新错误——ago 是纯过去时间，绝不能与现在完成时连用。②方向对了（知道要变 be 的形式），但用了 died：be 后面要接形容词，die 是动词、dead 才是形容词，be died 这个组合不存在。',
+    fix:'看到「现在完成时 + for/since + 时间段」，先检查动词是不是短暂动词，是就换成延续性说法：come/go/arrive back→be back，die→be dead（不是be died！die动词/dead形容词/death名词），borrow→keep，buy→have，begin/start→be on，join→be in / be a member of。另记死规矩：ago、yesterday、last year 这类纯过去时间状语只配一般过去时，永远不配现在完成时。'
+  },
+  {
+    id: 17, subject:'英语', date:'2026-07-27',
+    q:'L4追问：为什么「____ he said is true」必须用 What 不能用 That？（第三次考同一原理）',
+    mine:'因为 that 不可以引导主语从句',
+    right:'因为从句 he said 里 said 是及物动词、后面缺宾语，必须用能充当成分的 what 去补（what = the thing that）。that 是可以引导主语从句的，例如 That he passed the exam surprised everyone.',
+    why:'凭空给 that 加了一条不存在的限制。真实情况相反：that 完全能引导主语从句，只是它永远不作成分，所以只能带「不缺零件」的从句。三天内第三次栽在同一原理上（见 id 10、id 12），而且每次题都做对、每次理由都说错——典型的「L3假象」：靠语感做对，原理没内化，换个陌生句型就会倒。',
+    fix:'唯一标准（管所有名词性从句和定语从句）：用手指盖住引导词，只读后半句，数成分。缺成分→用能当成分的词补（what/who/which/whoever）；不缺→用不作成分的 that。反例自测法：想说「that 不能干某事」之前，先自己造一句反例试试——That he passed the exam surprised everyone，一造就露馅。'
+  },
+  {
+    id: 18, subject:'英语', date:'2026-07-27',
+    q:'判断从句类型：I still remember the day when we first met.',
+    mine:'状语从句',
+    right:'定语从句（when 是关系副词，修饰先行词 the day）',
+    why:'看到 when 就条件反射判成时间状语从句，没注意到 when 前面杵着一个 the day 正等着被修饰。',
+    fix:'when 能引导三种从句，判断法只有一条——把从句整个删掉看主句：①主句残缺（动词缺宾语）→宾语从句（I don not know when we will meet：know缺宾语）②主句完整+前面有名词被修饰→定语从句（I remember the day when...）③主句完整+前面没有被修饰的名词→状语从句（When we met, I was ten）。速记：看到「时间名词 + when」条件反射就是定语从句。'
+  },
 ];
 
 let data = load();
