@@ -389,6 +389,22 @@ const SEED = [
     why:'没认出这是 not...until 的强调句改写，跑去用 do/did 强调谓语，还写出 did do not 这种助动词撞车的形式。',
     fix:'not...until 强调句两步走：①把 not until + 从句整块拎到 It was 后面 → It was not until he told me ②剩下的部分改成肯定，放在 that 后面 → that I realized my mistake。两个坑：not 必须跟着 until 一起前移（别写成 It was until），前移之后 that 后面一律变肯定（realized，不是 did not realize）。'
   },
+  {
+    id: 21, subject:'英语', date:'2026-07-28',
+    q:'特殊疑问句改成强调句（两处同类）：① Where did you find the key? ② 改错：When was it that did you finish your homework?',
+    mine:'① Where was it that the key you found?　② When was it that you finish your homework?',
+    right:'① Where was it that you found the key?　② When was it that you finished your homework?',
+    why:'①把「陈述语序」误解成要调整词序，反而把宾语 the key 提到主语前面——其实陈述语序就是最普通的主谓宾顺序，被强调的只有 Where，其余部分原样照搬。②助动词 did 删对了，但时态没跟上：did 一走，时态必须还给实义动词，finish 要变 finished。',
+    fix:'公式：疑问词 + is/was it that + 陈述语序。两步操作：先把疑问句还原成陈述句（Where did you find the key → you found the key），再往公式里塞。通用规则：助动词扛时态，助动词一走动词自己扛（did you finish → you finished；does he like → he likes；did she go → she went）。'
+  },
+  {
+    id: 22, subject:'英语', date:'2026-07-28',
+    q:'强调原因改写：She stayed at home because it was raining.',
+    mine:'It was because raining that she stayed at home.',
+    right:'It was because it was raining that she stayed at home.（或 It was because of the rain that she stayed at home.）',
+    why:'把 because 当成了介词，后面直接跟了个 raining，缺主语和谓语，从句不成句。',
+    fix:'because 是连词，后面必须接完整句子（主+谓）；because of 是介词短语，后面接名词/名词短语。记法：because 后面站着一个人（主语），because of 后面只有一个东西。写作里这两个混用是高频失分点，改写时二选一：because it was raining / because of the rain。'
+  },
 ];
 
 let data = load();
