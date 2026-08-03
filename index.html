@@ -404,7 +404,615 @@ const SEED = [
     right:'It was because it was raining that she stayed at home.（或 It was because of the rain that she stayed at home.）',
     why:'把 because 当成了介词，后面直接跟了个 raining，缺主语和谓语，从句不成句。',
     fix:'because 是连词，后面必须接完整句子（主+谓）；because of 是介词短语，后面接名词/名词短语。记法：because 后面站着一个人（主语），because of 后面只有一个东西。写作里这两个混用是高频失分点，改写时二选一：because it was raining / because of the rain。'
+  },  {
+    id: 23, subject:"生物", date:"2026-07-30",
+    q:"ATP 为什么叫细胞的直接能源物质？ATP 水解释放能量时，一般断裂哪个化学键？",
+    mine:"因为 ATP 可以随时进行水解转换成 ADP 和 P；断裂磷键。",
+    right:"ATP 水解释放的能量可以直接用于细胞的各项生命活动，所以叫细胞的直接能源物质；水解时一般断裂远离腺苷的特殊化学键（末端磷酸基团与相邻磷酸基团之间的高能磷酸键/特殊化学键），生成 ADP 和 Pi。",
+    why:"知道 ATP 能水解供能，但术语不够精确，把关键得分点写成了笼统的“磷键”。生物题按关键词给分，ATP 这里要落到“远离腺苷的特殊化学键/末端磷酸键”和“直接供能”。",
+    fix:"答 ATP 必带三句话：ATP 是细胞的直接能源物质；ATP 水解为 ADP + Pi 并释放能量；断裂的是远离腺苷的那个特殊化学键。不要只写“磷键”。"
   },
+  {
+    id: 24, subject:"生物", date:"2026-07-30",
+    q:"有氧呼吸三个阶段分别发生在哪里？哪个阶段产生 CO₂？",
+    mine:"细胞质基质、线粒体基质、线粒体内膜；第三阶段产生 CO₂。",
+    right:"第一阶段在细胞质基质；第二阶段在线粒体基质；第三阶段在线粒体内膜。CO₂ 产生于第二阶段，第三阶段是 [H] 与 O₂ 结合生成 H₂O，并释放大量能量。",
+    why:"把第二阶段和第三阶段的物质变化记混了。第三阶段确实释放大量能量，但它消耗 O₂、生成 H₂O，不产生 CO₂。",
+    fix:"有氧呼吸三阶段用一句话钉住：一糖变丙在基质，二丙进线产 CO₂，三氢氧结合产水多能量。看到 CO₂ 就找第二阶段/线粒体基质；看到 O₂ 和 H₂O 就找第三阶段/线粒体内膜。"
+  },
+  {
+    id: 25, subject:"生物", date:"2026-07-30",
+    q:"无氧呼吸一定产生酒精吗？请举出两种无氧呼吸产物类型。",
+    mine:"不一定。酒精或乳酸与少量能量。",
+    right:"不一定。无氧呼吸常见两类产物：酒精和 CO₂，或乳酸；两类过程都会释放少量能量，但“少量能量”不是用来区分两种产物类型的关键词。",
+    why:"判断“不一定”对了，但酒精型产物漏了 CO₂，还把“少量能量”混进产物类型里，导致关键词不完整。",
+    fix:"无氧呼吸产物只背两行：植物/酵母菌常见为酒精 + CO₂；动物骨骼肌、乳酸菌常见为乳酸。共同点是都只释放少量能量。"
+  },
+  {
+    id: 26, subject:"生物", date:"2026-07-30",
+    q:"光合作用光反应和暗反应分别发生在哪里？光反应给暗反应提供哪两种物质？",
+    mine:"光反应在细胞质基质；暗反应不知道；光反应给暗反应提供有机物和氧气。",
+    right:"光反应发生在叶绿体类囊体薄膜上；暗反应发生在叶绿体基质中。光反应给暗反应提供 ATP 和 NADPH（[H]），暗反应利用它们固定并还原 CO₂，合成糖类等有机物。",
+    why:"把光合作用场所和产物链条记混了：细胞质基质是呼吸作用第一阶段场所，不是光合作用场所；有机物是暗反应合成的结果，氧气是光反应水光解产生并释放的产物，不是交给暗反应用的物质。",
+    fix:"光合作用两步口诀：光反应在类囊体薄膜，产 O₂、ATP、NADPH；暗反应在叶绿体基质，用 CO₂、ATP、NADPH，合成有机物。问“给暗反应什么”只答 ATP 和 NADPH。"
+  },
+  {
+    id: 27, subject:"生物", date:"2026-07-30",
+    q:"有氧呼吸产生 CO₂ 的阶段和场所分别是什么？",
+    mine:"第二阶段，叶绿体基质。",
+    right:"第二阶段，线粒体基质。",
+    why:"阶段已经改对了，但把有氧呼吸的场所写成了叶绿体基质。叶绿体基质是光合作用暗反应的场所，不是细胞呼吸的场所。",
+    fix:"先分清两套场所：呼吸作用看线粒体，光合作用看叶绿体。有氧呼吸第二阶段在线粒体基质产生 CO₂；光合作用暗反应才在叶绿体基质固定 CO₂。看到“产生 CO₂”找呼吸第二阶段/线粒体基质，看到“固定 CO₂”找暗反应/叶绿体基质。"
+  },
+  {
+    id: 28, subject:"生物", date:"2026-07-30",
+    q:"暗反应发生在哪里？它是产生 CO₂ 还是固定 CO₂？",
+    mine:"线粒体基质，产生 CO₂。",
+    right:"暗反应发生在叶绿体基质；它固定 CO₂，不是产生 CO₂。",
+    why:"把光合作用暗反应和有氧呼吸第二阶段混在一起了。线粒体基质对应有氧呼吸第二阶段，功能是产生 CO₂；叶绿体基质对应光合作用暗反应，功能是固定 CO₂ 并合成有机物。",
+    fix:"看到“暗反应”先锁定叶绿体基质；看到“固定 CO₂”也锁定叶绿体基质。看到“有氧呼吸第二阶段/产生 CO₂”才锁定线粒体基质。对比句：叶绿体基质固定 CO₂，线粒体基质产生 CO₂。"
+  },
+  {
+    id: 29, subject:"生物", date:"2026-07-30",
+    q:"原核细胞和真核细胞最根本的区别是什么？蓝细菌有没有叶绿体？能不能光合作用？",
+    mine:"有无细胞核；蓝细菌没有叶绿体，不可以光合作用。",
+    right:"根本区别是有无以核膜为界限的细胞核；蓝细菌没有叶绿体，但含有藻蓝素和叶绿素，能进行光合作用。",
+    why:"把原核细胞说成简单的“没有细胞核”，术语不够准；又把“没有叶绿体”和“不能光合作用”错误绑定。蓝细菌是原核生物，没有叶绿体，但仍能光合作用。",
+    fix:"原核 vs 真核要写完整关键词：有无以核膜为界限的细胞核。蓝细菌单独记：原核、无叶绿体、能光合作用。不要用“有没有叶绿体”直接判断能不能光合。"
+  },
+  {
+    id: 30, subject:"生物", date:"2026-07-30",
+    q:"细胞中鲜重最多的元素、干重最多的元素分别是什么？鲜重最多的化合物、干重最多的化合物分别是什么？",
+    mine:"H、C；水、二氧化碳。",
+    right:"鲜重最多的元素是 O，干重最多的元素是 C；鲜重最多的化合物是水，干重最多的化合物是蛋白质。",
+    why:"把鲜重最多的元素误记成 H，又把干重最多的化合物误写成 CO₂。CO₂ 是小分子无机物，不是细胞干重最多的化合物。",
+    fix:"四个空固定背：鲜重元素 O，干重元素 C；鲜重化合物水，干重化合物蛋白质。口诀：鲜 O 水，干 C 蛋。"
+  },
+  {
+    id: 31, subject:"生物", date:"2026-07-30",
+    q:"细胞膜的基本支架是什么？细胞膜的结构特点和功能特点分别是什么？",
+    mine:"磷酸双分子层；流动性；选择透过性。",
+    right:"细胞膜的基本支架是磷脂双分子层；结构特点是具有一定的流动性；功能特点是选择透过性。",
+    why:"结构特点和功能特点答对了，但把“磷脂双分子层”写成了“磷酸双分子层”。这是生物关键词错误，磷酸不是构成膜基本支架的脂质。",
+    fix:"细胞膜基本支架必须写满“磷脂双分子层”。磷脂是脂质，能形成膜；磷酸只是磷脂分子的一部分，不能写成磷酸双分子层。"
+  },
+  {
+    id: 32, subject:"生物", date:"2026-07-30",
+    q:"自由扩散、协助扩散、主动运输分别是否需要载体、是否消耗能量？",
+    mine:"第一二个不需要载体；第一个不需要能量。",
+    right:"自由扩散：不需要载体，不消耗能量；协助扩散：需要载体，不消耗能量；主动运输：需要载体，消耗能量。",
+    why:"把协助扩散是否需要载体记错了，并且漏答主动运输。协助扩散和自由扩散都属于被动运输，都不耗能，但协助扩散必须借助载体蛋白或通道蛋白。",
+    fix:"三行表背死：自由扩散=不要载体不要能量；协助扩散=要载体不要能量；主动运输=要载体要能量。题目问“三个分别”时必须三行都答，避免漏第二问/第三项。"
+  },
+  {
+    id: 33, subject:"生物", date:"2026-07-30",
+    q:"酶的本质是什么？高温和低温对酶的影响有什么区别？",
+    mine:"大部分是蛋白质，少部分是 DNA；酶是活细胞产生的有催化功能的有机物。高温破坏空间结构不可逆，低温抑制活性可逆。",
+    right:"酶绝大多数是蛋白质，少数是 RNA；酶是活细胞产生的具有催化作用的有机物。高温、强酸、强碱会使酶空间结构被破坏而变性失活，通常不可逆；低温只抑制酶活性，不破坏空间结构，通常可逆。",
+    why:"温度影响答对了，但把少数酶的本质误记为 DNA。教材高频表述是绝大多数酶是蛋白质，少数酶是 RNA。",
+    fix:"酶的本质固定句：绝大多数是蛋白质，少数是 RNA。看到“少数酶”不要写 DNA。再接温度区别：高温破结构不可逆，低温抑活性可逆。"
+  },
+  {
+    id: 34, subject:"生物", date:"2026-07-30",
+    q:"光反应和暗反应的场所分别是什么？光反应为暗反应提供什么？暗反应固定什么？",
+    mine:"叶绿体囊体内膜；叶绿体基质；ATP 和还原 H；二氧化碳。",
+    right:"光反应发生在叶绿体类囊体薄膜上；暗反应发生在叶绿体基质中。光反应为暗反应提供 ATP 和还原氢 [H]/NADPH；暗反应固定 CO₂。",
+    why:"后半部分答对了，但光反应场所术语不标准。教材关键词是“类囊体薄膜”，不是“囊体内膜”。分班考按关键词给分，这种术语差一截可能丢分。",
+    fix:"光合作用场所两句背准：光反应在叶绿体类囊体薄膜；暗反应在叶绿体基质。类囊体薄膜产 O₂、ATP、[H]，叶绿体基质固定 CO₂、合成有机物。"
+  },
+  {
+    id: 35, subject:"生物", date:"2026-07-30",
+    q:"核酸的基本组成单位是什么？这个单位由哪三部分组成？",
+    mine:"DNA 和 RNA；磷酸、五碳糖、含氮碱基。",
+    right:"核酸的基本组成单位是核苷酸；每个核苷酸由一分子磷酸、一分子五碳糖和一分子含氮碱基组成。DNA 和 RNA 是核酸的两种类型，不是核酸的基本组成单位。",
+    why:"把核酸的分类当成了基本组成单位。DNA/RNA 是大分子核酸，核苷酸才是组成它们的单体。三部分组成记对了，但单位名称错会丢关键词分。",
+    fix:"层级记忆：核酸分 DNA 和 RNA；核酸的基本单位是核苷酸；核苷酸 = 磷酸 + 五碳糖 + 含氮碱基。问“单位”答核苷酸，问“种类”答 DNA/RNA。"
+  },
+  {
+    id: 36, subject:"生物", date:"2026-07-30",
+    q:"DNA 和 RNA 在五碳糖、特有碱基上分别有什么区别？",
+    mine:"五碳糖区别不知道；DNA 是 T，RNA 是 U。",
+    right:"DNA 中的五碳糖是脱氧核糖，特有碱基是 T；RNA 中的五碳糖是核糖，特有碱基是 U。",
+    why:"特有碱基记对了，但五碳糖区别空了。DNA/RNA 对比题通常两个维度都要答，漏五碳糖会丢一半分。",
+    fix:"一组对照背：DNA = 脱氧核糖 + T；RNA = 核糖 + U。脱氧核糖可以理解成比核糖少一个氧，看到“脱氧”就锁 DNA。"
+  },
+  {
+    id: 37, subject:"生物", date:"2026-07-30",
+    q:"分泌蛋白从合成到分泌出细胞，经过哪些细胞结构？按顺序写。",
+    mine:"核糖体、内质层、高尔基体、细胞质、细胞膜、细胞膜外。",
+    right:"核糖体 → 内质网 → 囊泡 → 高尔基体 → 囊泡 → 细胞膜 → 细胞外。常用简写：核糖体 → 内质网 → 高尔基体 → 细胞膜 → 细胞外，但要知道中间靠囊泡运输。",
+    why:"把“内质网”写成了“内质层”，漏了囊泡，还把细胞质混进路线。分泌蛋白路线考的是膜性细胞器协作和囊泡运输，细胞质不是这条路线的关键结构。",
+    fix:"口诀按顺序背：核内高膜外。完整版：核糖体合成 → 内质网加工 → 囊泡运输 → 高尔基体再加工 → 囊泡 → 细胞膜 → 细胞外。"
+  },
+  {
+    id: 38, subject:"生物", date:"2026-07-30",
+    q:"主动运输为什么能逆浓度梯度运输物质？需要哪两个条件？",
+    mine:"忘了。",
+    right:"主动运输能逆浓度梯度运输，是因为它需要载体蛋白协助并消耗细胞代谢产生的能量（通常来自 ATP）。两个条件：载体蛋白和能量。",
+    why:"主动运输的两个核心条件没有提取出来。它和协助扩散都需要载体，但主动运输额外消耗能量，所以能逆浓度梯度。",
+    fix:"主动运输三关键词：逆浓度梯度、载体蛋白、消耗能量。对比记：协助扩散=要载体不耗能；主动运输=要载体又耗能，所以能逆着运。"
+  },
+  {
+    id: 39, subject:"生物", date:"2026-07-30",
+    q:"ATP 和 ADP 相互转化是否是可逆反应？为什么？",
+    mine:"是，因为 ATP 可以水解成 ADP 和 P，ADP 和 P 可以合成 ATP。",
+    right:"ATP 和 ADP 在物质上可以相互转化，但不是简单的可逆反应。因为 ATP 合成和水解所需的酶不同、场所不同，能量来源和能量去向也不同。",
+    why:"只看到物质能互相转化，就判成可逆反应，忽略了“可逆反应”要求同一条件下正逆过程可逆。教材考点强调 ATP 与 ADP 的相互转化不是简单可逆反应。",
+    fix:"答法固定：物质可逆，反应不可逆。原因写三不同：酶不同、场所不同、能量来源和去向不同。ATP 水解释放能量供生命活动；ATP 合成需要呼吸作用/光合作用等提供能量。"
+  },
+  {
+    id: 40, subject:"生物", date:"2026-07-30",
+    q:"光合作用中，光能最终储存在什么物质中？呼吸作用释放的能量大部分以什么形式散失？",
+    mine:"叶绿体；化学能。",
+    right:"光合作用中，光能最终转化并储存在糖类等有机物中稳定的化学能里；呼吸作用释放的能量大部分以热能形式散失，少部分储存在 ATP 中。",
+    why:"把光能最终储存的位置答成了细胞结构“叶绿体”，没有答到物质和能量形式；又把呼吸作用大部分能量的散失形式写成化学能，实际大部分以热能散失。",
+    fix:"能量流向两句背：光合作用把光能变成有机物中稳定的化学能；呼吸作用分解有机物，能量大部分以热能散失，少部分转移到 ATP。问“最终储存在什么物质中”答有机物，不答叶绿体。"
+  },
+  {
+    id: 41, subject:"生物", date:"2026-07-30",
+    q:"细胞膜的信息交流方式有哪三类？各举一个例子。",
+    mine:"忘了。",
+    right:"三类：通过分泌化学物质进行信息交流，如激素随血液运输到靶细胞；通过细胞膜直接接触进行信息交流，如精子和卵细胞识别；通过细胞间形成通道进行信息交流，如植物细胞的胞间连丝。",
+    why:"第3章细胞膜功能中的高频三分类没有提取出来，尤其容易漏“形成通道”这一类。",
+    fix:"细胞膜信息交流三类按例子记：化学物质找受体=激素；膜接触=精卵识别；通道=胞间连丝。"
+  },
+  {
+    id: 42, subject:"生物", date:"2026-07-30",
+    q:"酶具有专一性是什么意思？举例说明。",
+    mine:"一种酶一般只能对一种物质产生催化作用，比如口腔淀粉酶只能催化淀粉。",
+    right:"酶的专一性是指一种酶通常只能催化一种或一类化学反应。例如淀粉酶催化淀粉水解，不能催化蛋白质水解。",
+    why:"例子方向对，但定义写成“对一种物质产生催化作用”不够标准。酶催化的是化学反应，不是笼统地“催化物质”；而且可能是一种或一类反应。",
+    fix:"酶专一性固定答法：一种酶通常只能催化一种或一类化学反应。举例时写清“催化某物水解/分解/合成”，不要只写“催化某物”。"
+  },
+  {
+    id: 43, subject:"生物", date:"2026-07-30",
+    q:"质壁分离发生的条件是什么？至少说出两个。",
+    mine:"产生浓度差。",
+    right:"质壁分离通常发生在成熟植物细胞中，条件包括：有细胞壁和大液泡，原生质层具有选择透过性，外界溶液浓度大于细胞液浓度，细胞失水。",
+    why:"只答了浓度差，且没有说清方向，也漏了成熟植物细胞、细胞壁/大液泡、原生质层选择透过性这些关键词。",
+    fix:"质壁分离条件用四点背：成熟植物细胞；有细胞壁和大液泡；原生质层选择透过；外界溶液浓度 > 细胞液浓度，细胞失水。"
+  },
+  {
+    id: 44, subject:"生物", date:"2026-07-30",
+    q:"为什么说线粒体和叶绿体是半自主性细胞器？",
+    mine:"因为它们都是双层结构。",
+    right:"因为线粒体和叶绿体都含有少量 DNA、RNA 和核糖体，能相对独立地进行部分蛋白质合成和自我复制，但其生命活动仍受细胞核控制，所以称为半自主性细胞器。",
+    why:"把“双层膜细胞器”和“半自主性细胞器”的判断依据混了。双层膜只是结构特点，不是半自主性的核心原因。",
+    fix:"半自主性抓三个关键词：有 DNA、有核糖体、能部分自我复制/合成蛋白质；但仍受细胞核控制，所以叫“半”自主。"
+  },
+  {
+    id: 45, subject:"生物", date:"2026-07-30",
+    q:"细胞膜信息交流三类分别是什么？",
+    mine:"分泌化学物质、细胞之间交流、形成通道。",
+    right:"分泌化学物质进行信息交流；细胞膜直接接触进行信息交流；细胞间形成通道进行信息交流。",
+    why:"第二类答成了泛泛的“细胞之间交流”，没有落到课本关键词“细胞膜直接接触”。这类题按三类方式给分，术语不准容易丢分。",
+    fix:"三类固定背：化学物质、膜直接接触、形成通道。例子对应：激素、精卵识别、胞间连丝。"
+  },
+  {
+    id: 46, subject:"生物", date:"2026-07-30",
+    q:"RNA 用什么染色？主要分布在哪里？",
+    mine:"吡罗红；细胞膜。",
+    right:"RNA 用吡罗红染成红色，主要分布在细胞质中。",
+    why:"染色剂记对了，但把 RNA 的主要分布位置写成了细胞膜。教材实验考点是 DNA 主要在细胞核，RNA 主要在细胞质。",
+    fix:"固定对照：甲基绿染 DNA，主要在细胞核；吡罗红染 RNA，主要在细胞质。记“绿核 DNA，红质 RNA”。"
+  },
+  {
+    id: 47, subject:"生物", date:"2026-07-30",
+    q:"鉴定还原糖时，斐林试剂为什么要现配现用？",
+    mine:"保持最好药效。",
+    right:"斐林试剂甲液和乙液混合后会生成 Cu(OH)₂ 悬浊液，该物质不稳定，所以要现配现用，以保证实验现象可靠。",
+    why:"答成了生活化的“药效”，没有说出生物实验题要的化学原因：混合后生成的 Cu(OH)₂ 不稳定。",
+    fix:"斐林试剂现配现用的关键词：甲乙混合、Cu(OH)₂、不稳定、现配现用。不要写“药效”这类泛泛词。"
+  },
+  {
+    id: 48, subject:"生物", date:"2026-07-30",
+    q:"质壁分离实验中，原生质层包括哪些结构？",
+    mine:"细胞壁、细胞膜、细胞质、液泡。",
+    right:"原生质层包括细胞膜、液泡膜以及两层膜之间的细胞质。它不包括细胞壁，也不包括整个液泡。",
+    why:"把细胞壁和整个液泡都放进了原生质层。质壁分离中的“壁”是细胞壁，“质”主要指原生质层，二者正是要分离的对象，所以细胞壁不能属于原生质层。",
+    fix:"原生质层三件套：细胞膜、液泡膜、两膜之间的细胞质。口诀：膜-质-膜，不带细胞壁，不带整个液泡。"
+  },
+  {
+    id: 49, subject:"生物", date:"2026-07-30",
+    q:"质壁分离复原说明细胞还活着，为什么？",
+    mine:"因为细胞膜还有伸缩性。",
+    right:"因为活细胞的原生质层具有选择透过性，能通过渗透作用失水和吸水；死细胞的原生质层失去选择透过性，不能发生正常的质壁分离和复原。",
+    why:"把原因落在“伸缩性”上，没抓住判断活细胞的关键：原生质层的选择透过性。复原不是单纯膜能伸缩，而是活细胞能通过渗透作用重新吸水。",
+    fix:"质壁分离/复原判断活细胞，答题关键词必须有：原生质层、选择透过性、渗透吸水。不要只写伸缩性。"
+  },
+  {
+    id: 50, subject:"化学", date:"2026-07-31",
+    q:"标况下 11.2 L CO2 是多少 mol？质量是多少？已知 CO2 的摩尔质量为 44 g/mol。",
+    mine:"只答 22 g，漏答物质的量。",
+    right:"n = V / Vm = 11.2 / 22.4 = 0.5 mol；m = nM = 0.5 * 44 = 22 g。",
+    why:"题目有两个问题：先问物质的量，再问质量。只算出了质量，没有数清题目要求。",
+    fix:"遇到 mol 综合题先圈量：V、n、m、M。题目问几个量就分行答几个量，最后检查单位是否都有。"
+  },
+  {
+    id: 51, subject:"化学", date:"2026-07-31",
+    q:"判断 NaCl、BaSO4、H2O、CO2、HCl 在离子方程式中哪些要拆成离子，哪些不能拆。",
+    mine:"不会。",
+    right:"NaCl、HCl 要拆；BaSO4、H2O、CO2 不能拆。强酸、强碱、可溶性盐拆；沉淀、气体、水、氧化物、单质、弱电解质不拆。",
+    why:"没有把“能拆”和“不能拆”的对象按类别记住，导致离子方程式第一步无法判断。",
+    fix:"口诀：强酸强碱可溶盐拆；沉淀气体水、氧化物单质弱电解质不拆。写离子方程式时先标状态和类别再决定拆不拆。"
+  },
+  {
+    id: 52, subject:"化学", date:"2026-07-31",
+    q:"标况下 5.6 L O2 是多少 mol？含有多少 mol 的 O 原子？",
+    mine:"0.4 mol，0.4NA。",
+    right:"n(O2)=5.6/22.4=0.25 mol；每个 O2 分子含 2 个 O 原子，所以 n(O原子)=0.25*2=0.5 mol。",
+    why:"体积换 mol 时没有用 22.4 L/mol 正确换算，并且把“mol 的原子”和“原子个数”混在一起。",
+    fix:"标况气体先用 n=V/22.4；问几 mol 原子就乘下标，问原子个数才乘 NA。"
+  },
+  {
+    id: 53, subject:"化学", date:"2026-07-31",
+    q:"判断 NaOH、H2O、BaSO4、HCl、CO2、Na2SO4 在离子方程式中哪些要拆，哪些不拆。",
+    mine:"只答 NaOH、HCl、Na2SO4，没有写 H2O、BaSO4、CO2 不拆。",
+    right:"NaOH、HCl、Na2SO4 要拆；H2O、BaSO4、CO2 不拆。强酸、强碱、可溶性盐拆；水、沉淀、气体、氧化物、单质、弱电解质不拆。",
+    why:"题目问“哪些要拆，哪些不拆”，只回答了一半，属于多问漏答。",
+    fix:"离子拆写题必须分两栏：要拆/不拆。写完后检查题目给出的每个物质是否都被归类。"
+  },
+  {
+    id: 54, subject:"化学", date:"2026-07-31",
+    q:"判断 CaCO3 = CaO + CO2 是否是氧化还原反应，并说明原因。",
+    mine:"不是，这是分解反应。",
+    right:"不是氧化还原反应。原因是 Ca、C、O 的化合价都没有变化；判断氧化还原看化合价是否变化，不能只看反应类型。",
+    why:"把“分解反应”当成判断依据，但分解反应也可能是氧化还原反应。真正依据应是化合价变化。",
+    fix:"判断氧化还原四字法：先标价，再看变。无变价就不是；有变价就是。"
+  },
+  {
+    id: 55, subject:"化学", date:"2026-07-31",
+    q:"Zn + CuSO4 = ZnSO4 + Cu 中，氧化剂是谁？还原剂是谁？谁被氧化？谁被还原？",
+    mine:"CuSO4，Zn，CuSO4，Zn。",
+    right:"氧化剂是 CuSO4 中的 Cu2+；还原剂是 Zn；Zn 化合价从 0 升到 +2，被氧化；Cu2+ 化合价从 +2 降到 0，被还原。",
+    why:"能判断氧化剂和还原剂，但把“谁被氧化/谁被还原”与“氧化剂/还原剂”的对应关系混淆了。",
+    fix:"记住：还原剂被氧化，氧化剂被还原。升失氧还原剂；降得还氧化剂。"
+  },
+  {
+    id: 56, subject:"化学", date:"2026-07-31",
+    q:"判断 2H2O2 = 2H2O + O2↑ 是否是氧化还原反应，并说明原因。",
+    mine:"是，因为氧元素和氢元素的化合价改变了。",
+    right:"是氧化还原反应，但只有 O 元素化合价改变：H2O2 中 O 为 -1，H2O 中 O 为 -2，O2 中 O 为 0；H 始终为 +1。",
+    why:"知道要看化合价变化，但没有逐个元素标价，误以为 H 也变价。",
+    fix:"判断氧化还原必须先标价：常见 H 为 +1，O 在普通化合物中 -2，在过氧化物 H2O2 中为 -1，单质为 0。"
+  },
+  {
+    id: 57, subject:"化学", date:"2026-07-31",
+    q:"Fe + CuSO4 = FeSO4 + Cu 中，谁是氧化剂？谁是还原剂？谁被氧化？谁被还原？",
+    mine:"Cu，Fe，Cu，Fe。",
+    right:"氧化剂是 CuSO4 中的 Cu2+；还原剂是 Fe；Fe 化合价 0 -> +2，被氧化；Cu2+ 化合价 +2 -> 0，被还原。",
+    why:"仍然把氧化剂/还原剂和被氧化/被还原的对应关系反了，而且氧化剂要准确写 Cu2+，不能只写生成物 Cu。",
+    fix:"固定对应：还原剂被氧化，氧化剂被还原。做题四步：标价 -> 找升降 -> 升者还原剂且被氧化 -> 降者氧化剂且被还原。"
+  },
+  {
+    id: 58, subject:"化学", date:"2026-07-31",
+    q:"判断 NaOH、酒精、CO2、HCl、蔗糖、BaSO4 中哪些是电解质，哪些是非电解质。",
+    mine:"不知道。",
+    right:"电解质：NaOH、HCl、BaSO4；非电解质：酒精、CO2、蔗糖。BaSO4 虽难溶，但属于盐，在熔融状态或溶解的极少部分能电离，仍是电解质；CO2 溶于水导电是因为生成 H2CO3，不是 CO2 自身电离。",
+    why:"没有掌握电解质/非电解质的判断对象：看化合物本身在水溶液或熔融状态能否电离导电，而不是只看常温下是否溶于水或水溶液是否导电。",
+    fix:"常见判断：酸、碱、盐多数是电解质；酒精、蔗糖等有机物和 CO2、SO2、NH3 等自身不电离的化合物是非电解质。特别记：难溶盐如 BaSO4 仍是电解质。"
+  },
+  {
+    id: 59, subject:"化学", date:"2026-07-31",
+    q:"NaCl、CO2、BaSO4、酒精、Cu、NaCl溶液中，哪些是电解质？哪些是非电解质？哪些两者都不是？",
+    mine:"电解质：NaCl、BaSO4；非电解质：CO2、酒精；都不是：NaCl溶液。漏掉 Cu。",
+    right:"电解质：NaCl、BaSO4；非电解质：CO2、酒精；两者都不是：Cu、NaCl溶液。电解质和非电解质都必须先是化合物，单质和混合物不归入这两类。",
+    why:"判断时只注意到 NaCl溶液是混合物，却漏掉 Cu 是单质。没有先用“是否为化合物”做第一步筛选。",
+    fix:"电解质分类三步：先排单质和混合物；再看化合物能否自身电离；酸碱盐多为电解质，酒精/蔗糖/CO2/SO2 多为非电解质。"
+  },
+  {
+    id: 60, subject:"化学", date:"2026-07-31",
+    q:"HCl、O2、KOH、蔗糖、KNO3溶液、CaCO3 中，哪些是电解质？哪些是非电解质？哪些两者都不是？",
+    mine:"电解质：HCl、KOH、CaCO3；非电解质：O2、蔗糖；都不是：KNO3溶液。",
+    right:"电解质：HCl、KOH、CaCO3；非电解质：蔗糖；两者都不是：O2、KNO3溶液。O2 是单质，KNO3溶液是混合物，二者都不是化合物，所以既不是电解质也不是非电解质。",
+    why:"虽然知道混合物不属于电解质/非电解质，但仍把单质 O2 误归为非电解质，说明没有先判断“是否为化合物”。",
+    fix:"分类第一刀：只要不是化合物，直接归入“两者都不是”。单质如 O2、Cu、Fe 和混合物如溶液、空气，都既不是电解质也不是非电解质。"
+  },
+  {
+    id: 61, subject:"化学", date:"2026-07-31",
+    q:"写离子方程式：CaCO3 + 2HCl = CaCl2 + H2O + CO2↑。",
+    mine:"CO3^2- + 2H+ = H2O + CO2↑。",
+    right:"CaCO3 + 2H+ = Ca2+ + H2O + CO2↑。CaCO3 难溶，不能拆；HCl 拆成 H+ 和 Cl-；CaCl2 是可溶盐，拆成 Ca2+ 和 Cl-；删去旁观离子 Cl-。",
+    why:"把难溶盐 CaCO3 误拆成 CO3^2-，没有先判断物质能不能拆。",
+    fix:"写离子方程式先拆写规则：强酸强碱可溶盐拆；沉淀、气体、水、氧化物、单质、弱电解质不拆。CaCO3、BaSO4、AgCl 这类沉淀/难溶盐不能拆。"
+  },
+  {
+    id: 62, subject:"化学", date:"2026-07-31",
+    q:"写离子方程式：Fe + 2HCl = FeCl2 + H2↑。",
+    mine:"Fe + 2H+ + 2Cl- = Fe2+ + Cl2- + H2↑。",
+    right:"Fe + 2H+ = Fe2+ + H2↑。Fe 是单质不拆；HCl 拆成 H+ 和 Cl-；FeCl2 是可溶盐，拆成 Fe2+ 和 2Cl-；左右两边的 2Cl- 是旁观离子，要删掉。",
+    why:"没有删除旁观离子 Cl-，且把两个 Cl- 误写成 Cl2-。离子系数不能写成错误的离子符号。",
+    fix:"拆完后必须删左右相同离子。2Cl- 表示两个氯离子，不能写成 Cl2-；Cl2 是氯气单质，Cl- 才是氯离子。"
+  },
+  {
+    id: 63, subject:"化学", date:"2026-07-31",
+    q:"写离子方程式：CaCO3 + 2HCl = CaCl2 + H2O + CO2↑。",
+    mine:"CaCO3 + 2H+ = H2O + CO2↑，漏写 Ca2+。",
+    right:"CaCO3 + 2H+ = Ca2+ + H2O + CO2↑。CaCO3 不能拆，HCl 拆，CaCl2 拆成 Ca2+ 和 2Cl-，Cl- 是旁观离子删去，但 Ca2+ 必须保留。",
+    why:"拆、删后只关注了气体和水，漏掉了生成的 Ca2+，导致原子和电荷都不守恒。",
+    fix:"离子方程式最后必须查两项：原子守恒、电荷守恒。看到难溶碳酸盐 + 酸，模板是：碳酸盐固体 + 2H+ = 金属阳离子 + H2O + CO2↑。"
+  },
+  {
+    id: 64, subject:"化学", date:"2026-07-31",
+    q:"写离子方程式：CuO + 2HCl = CuCl2 + H2O。",
+    mine:"O2- + 2H+ = H2O。",
+    right:"CuO + 2H+ = Cu2+ + H2O。CuO 是氧化物，不能拆；HCl 拆成 H+ 和 Cl-；CuCl2 是可溶盐，拆成 Cu2+ 和 2Cl-；Cl- 删去。",
+    why:"把氧化物 CuO 错拆成 O2-，并漏掉生成的 Cu2+。离子方程式中氧化物通常不能拆。",
+    fix:"拆写口诀：强酸强碱可溶盐拆；沉淀、气体、水、氧化物、单质不拆。写完后查是否漏了生成的金属阳离子。"
+  },
+  {
+    id: 65, subject:"化学", date:"2026-07-31",
+    q:"标况下 4.48 L O2 是多少 mol？含多少 mol O 原子？",
+    mine:"0.25 mol，0.5 mol。",
+    right:"n(O2)=4.48/22.4=0.2 mol；每个 O2 分子含 2 个 O 原子，所以 n(O原子)=0.2*2=0.4 mol。",
+    why:"标况气体体积换 mol 时把 4.48/22.4 算成了 0.25，导致后面的 O 原子物质的量也跟着错。",
+    fix:"标况气体固定先写 n=V/22.4。常见值记住：2.24 L=0.1 mol，4.48 L=0.2 mol，5.6 L=0.25 mol，11.2 L=0.5 mol。"
+  },
+  {
+    id: 66, subject:"化学", date:"2026-07-31",
+    q:"标况 5.6 L O2 是多少 mol？含多少个 O2 分子？含多少 mol O 原子？",
+    mine:"0.25 mol，0.25NA，0.5NA。",
+    right:"0.25 mol O2；O2 分子个数为 0.25NA；O 原子的物质的量为 0.25*2=0.5 mol。",
+    why:"把“多少 mol O 原子”和“多少个 O 原子”混淆了。题目问 mol 时不能乘 NA，乘 NA 是求粒子个数。",
+    fix:"先看单位：问 mol 就只做物质的量换算；问个数才乘 NA。O2 到 O 原子：mol 原子 = mol O2 * 2；原子个数 = mol O2 * 2 * NA。"
+  },
+  {
+    id: 67, subject:"化学", date:"2026-08-01",
+    q:"写出氯气和水反应的方程式，并指出生成的有漂白性的物质。",
+    mine:"Cl2 + H2O = 2HClO。",
+    right:"Cl2 + H2O = HCl + HClO；有漂白性的是 HClO。HClO 不稳定，见光分解：2HClO = 2HCl + O2↑。",
+    why:"把氯气和水反应误写成只生成 HClO，漏掉 HCl。实际上氯气在水中发生歧化反应，同时生成 HCl 和 HClO。",
+    fix:"固定记：氯气入水生成“两酸”：盐酸 HCl + 次氯酸 HClO；漂白靠 HClO，不是靠 HCl。"
+  },
+  {
+    id: 68, subject:"化学", date:"2026-08-01",
+    q:"氯气和 NaOH 反应方程式是什么？漂白液有效成分是什么？",
+    mine:"Cl2 + 2NaOH = NaCl + NaClO + H2O；漏答有效成分。",
+    right:"Cl2 + 2NaOH = NaCl + NaClO + H2O；漂白液有效成分是 NaClO。",
+    why:"题目有两个问题，只写了方程式，没有单独回答“有效成分”。这属于多问漏答。",
+    fix:"遇到“方程式 + 有效成分/现象/用途”题，必须分行答。漂白液有效成分固定记 NaClO；漂白粉有效成分固定记 Ca(ClO)2。"
+  },
+  {
+    id: 69, subject:"化学", date:"2026-08-01",
+    q:"漂白粉有效成分是什么？",
+    mine:"HClO。",
+    right:"漂白粉有效成分是 Ca(ClO)2。漂白液有效成分是 NaClO。真正起漂白作用的物质通常是它们与酸或 CO2、水反应后生成的 HClO。",
+    why:"把“有效成分”和“真正起漂白作用的物质”混淆了。HClO 有漂白性，但漂白粉中有效成分要答 Ca(ClO)2。",
+    fix:"三句话分开背：漂白液有效成分 NaClO；漂白粉有效成分 Ca(ClO)2；真正漂白靠 HClO。"
+  },
+  {
+    id: 70, subject:"化学", date:"2026-08-01",
+    q:"写离子方程式：2FeCl2 + Cl2 = 2FeCl3。",
+    mine:"2Fe2+ + 2Cl = 2Fe3+ + 2Cl-。",
+    right:"2Fe2+ + Cl2 = 2Fe3+ + 2Cl-。FeCl2、FeCl3 都是可溶盐要拆；Cl2 是单质不能拆，保留 Cl2。",
+    why:"把反应物 Cl2 写成了不规范的 Cl，并且没有体现 Cl2 是单质不能拆。",
+    fix:"离子方程式中单质不拆：Cl2、H2、O2、Fe 都保留化学式。写完检查元素和电荷守恒。"
+  },
+  {
+    id: 71, subject:"化学", date:"2026-08-01",
+    q:"为什么 2Fe3+ + Fe = 3Fe2+？用化合价升降解释。",
+    mine:"Fe 作为还原剂会让 Fe3+ 得到电子，化合价升高。",
+    right:"Fe 是还原剂，失电子，化合价 0 -> +2，被氧化；Fe3+ 是氧化剂，得电子，化合价 +3 -> +2，降低，被还原。",
+    why:"把“得电子”和“化合价变化方向”对应反了。得电子对应化合价降低，失电子对应化合价升高。",
+    fix:"固定对应：失电子 -> 化合价升高 -> 被氧化 -> 还原剂；得电子 -> 化合价降低 -> 被还原 -> 氧化剂。"
+  },
+  {
+    id: 72, subject:"化学", date:"2026-08-01",
+    q:"写 Al2O3 和盐酸反应的离子方程式。",
+    mine:"Al2O3 + 6H+ + 3Cl- = 3H2O + Al + 3Cl-。",
+    right:"Al2O3 + 6H+ = 2Al3+ + 3H2O。Al2O3 是氧化物不拆；HCl 拆成 H+ 和 Cl-；AlCl3 拆成 Al3+ 和 Cl-；Cl- 是旁观离子要删去。",
+    why:"没有删去旁观离子 Cl-，并把生成物写成 Al 而不是 Al3+，还漏了系数 2，导致元素和电荷不守恒。",
+    fix:"金属氧化物与酸反应模板：金属氧化物 + H+ = 金属阳离子 + H2O。写完必须查原子守恒和电荷守恒。"
+  },
+  {
+    id: 73, subject:"化学", date:"2026-08-01",
+    q:"周期数等于什么？主族序数等于什么？",
+    mine:"周期数等于电子层数；主族序数等于核外电子层数。",
+    right:"周期数等于电子层数；主族序数等于最外层电子数。",
+    why:"把“主族序数”也误认为和电子层数有关。实际上周期看电子层数，主族看最外层电子数。",
+    fix:"口诀：横行看层数，纵族看外层。周期数=电子层数；主族序数=最外层电子数。"
+  },
+  {
+    id: 74, subject:"化学", date:"2026-08-01",
+    q:"同主族从上到下，原子半径、金属性、非金属性怎么变化？",
+    mine:"大、弱，漏答且金属性方向不稳。",
+    right:"同主族从上到下：原子半径逐渐增大，金属性逐渐增强，非金属性逐渐减弱。",
+    why:"只记住半径变大，没有把金属性/非金属性的方向和得失电子能力联系起来。",
+    fix:"同主族向下：层数增多，半径变大，更容易失电子，所以金属性增强；更不容易得电子，所以非金属性减弱。"
+  },
+  {
+    id: 75, subject:"地理", date:"2026-08-01",
+    q:"大气保温作用主要靠什么？",
+    mine:"不知道",
+    right:"大气保温作用主要靠大气逆辐射。地面放出长波辐射后，大气吸收并向地面返回一部分能量，这部分叫大气逆辐射。",
+    why:"只记住了晴天夜晚保温弱，但没有把‘保温作用’和标准关键词‘大气逆辐射’对应起来。",
+    fix:"遇到‘保温’先想‘大气逆辐射’；遇到‘削弱’再想吸收、反射、散射。晴天夜晚冷=大气逆辐射弱，阴天夜晚暖=大气逆辐射强。"
+  },
+  {
+    id: 76, subject:"地理", date:"2026-08-01",
+    q:"热力环流形成的根本原因是什么？",
+    mine:"风从高压吹向低压",
+    right:"热力环流形成的根本原因是地面冷热不均。冷热不均导致空气垂直运动，再造成同一水平面气压差，最后形成水平气流。",
+    why:"把‘空气从高压流向低压’这个水平运动规律当成了热力环流的根本原因，没有按‘冷热不均→垂直运动→气压差→水平运动’的因果链判断。",
+    fix:"看到‘根本原因’先找最开始的触发因素：热力环流=地面冷热不均；看到‘风向’才答高压吹向低压。"
+  },
+  {
+    id: 77, subject:"地理", date:"2026-08-01",
+    q:"等压线越密，风越大还是越小？为什么？",
+    mine:"大，因为气压越大风越强",
+    right:"等压线越密，说明同一距离内气压差越大，水平气压梯度力越大，所以风越大。风强弱主要看气压差或气压梯度，不是看某地气压绝对值高低。",
+    why:"把‘气压差越大’误说成‘气压越大’，混淆了绝对气压和气压梯度。高压中心气压很高，但如果周围气压变化小，风也不一定强。",
+    fix:"判断风力先看等压线疏密：密=气压梯度大=风大；疏=气压梯度小=风小。不要只看数值高低。"
+  },
+  {
+    id: 78, subject:"地理", date:"2026-08-01",
+    q:"冷锋过境时和过境后天气怎样变化？",
+    mine:"过境时：大风降水；过境后：气温变高，气压变低。",
+    right:"冷锋过境时常见大风、降水、降温；冷锋过境后，冷气团控制当地，气温下降，气压升高，天气转晴。",
+    why:"把冷锋过境后误当成暖气团控制，导致气温和气压方向答反；同时过境时漏掉了‘降温’这个关键词。",
+    fix:"冷锋=冷空气来了。冷空气来了以后更冷，所以气温下降；冷空气密度大，气压升高。口诀：冷锋过境，降温降雨刮大风；过后降温升压转晴。"
+  },
+  {
+    id: 79, subject:"数学", date:"2026-08-03",
+    q:"写出命题的否定：‘对任意实数 x，都有 x^2+1>0。’",
+    mine:"存在实数使得 x^2+1<0",
+    right:"存在实数 x，使得 x^2+1≤0。全称命题的否定要把‘任意’改成‘存在’，并把结论的否定写成 ≤0，而不是 <0。",
+    why:"只把全称量词改成存在量词，但把不等式 >0 的否定误写成 <0，漏掉了等于 0 的情况。",
+    fix:"命题否定两步走：改量词，否结论。> 的否定是 ≤；≥ 的否定是 <；< 的否定是 ≥；≤ 的否定是 >。"
+  },
+  {
+    id: 80, subject:"英语", date:"2026-08-03",
+    q:"He had hardly arrived at the station ___ the train left. A. when B. than C. before D. while",
+    mine:"C. before",
+    right:"A. when。固定结构是 hardly/scarcely ... when ...，表示‘刚……就……’。对应结构：no sooner ... than ...。",
+    why:"把句意上的‘在火车离开之前/刚到火车就走’误套成 before，没有识别 hardly ... when 这个固定倒装/时间结构。",
+    fix:"看到 hardly/scarcely 先找 when；看到 no sooner 先找 than。口诀：hardly when，no sooner than。"
+  },
+  {
+    id: 81, subject:"英语", date:"2026-08-03",
+    q:"No sooner had he sat down ___ the phone rang. A. when B. than",
+    mine:"A. when",
+    right:"B. than。固定结构是 no sooner ... than ...，表示‘刚……就……’。注意它和 hardly/scarcely ... when ... 成对区分。",
+    why:"把两个‘刚……就……’结构混在一起了：hardly/scarcely 搭配 when，而 no sooner 搭配 than。",
+    fix:"看到 no sooner 立刻选 than；看到 hardly/scarcely 立刻选 when。口诀：no sooner than，hardly when。"
+  },
+  {
+    id: 82, subject:"英语", date:"2026-08-03",
+    q:"___ the project, they held a meeting. (complete)",
+    mine:"Completing the project",
+    right:"Having completed the project, they held a meeting. 如果表示‘完成项目之后，他们开了会’，complete 这个动作发生在 held a meeting 之前，所以用 having done。",
+    why:"把主动发生在谓语动作之前的动作误当成了同时进行的 doing。Completing 更像‘一边完成项目，一边开会’，不符合句意。",
+    fix:"非谓语先判三件事：逻辑主语、主被动、先后。主动且早于谓语动作用 having done；主动且同时/伴随用 doing；目的用 to do。"
+  },
+  {
+    id: 83, subject:"英语", date:"2026-08-03",
+    q:"___ by the teacher many times, he finally understood it. (explain)",
+    mine:"Having been explained by the teacher many times",
+    right:"Having had it explained to him by the teacher many times, he finally understood it. 更自然的改写是：After the teacher had explained it to him many times, he finally understood it.",
+    why:"只看到 by the teacher 就判断为被动，但没有检查非谓语的逻辑主语。主句主语是 he，而 he 不是‘被解释’的东西，真正被解释的是 it。",
+    fix:"非谓语先看逻辑主语是否能发出/承受这个动作。不能说 he was explained；应说 it was explained to him，或 he had it explained to him。"
+  },
+  {
+    id: 84, subject:"英语", date:"2026-08-03",
+    q:"The meeting ___ over, everyone left the room. (be)",
+    mine:"was",
+    right:"being。应写 The meeting being over, everyone left the room. 独立主格结构中不能使用完整谓语 was，要用非谓语 being；也可省略 being 写成 The meeting over, everyone left the room.",
+    why:"把独立主格当成了完整从句来写，误用了谓语动词 was。独立主格的结构是‘名词/代词 + 非谓语/形容词/副词/介词短语’，不是完整句子。",
+    fix:"看到‘名词 + 空格 + 逗号 + 主句’时，先判断是不是独立主格。若填 be，通常用 being 或省略 be，不填 was/is/are 这种谓语动词。"
+  },
+  {
+    id: 85, subject:"英语", date:"2026-08-03",
+    q:"I wish I ___ harder when I was young. (study)",
+    mine:"could study",
+    right:"had studied。句中 when I was young 表示对过去事实的后悔，wish 后对过去虚拟用 had done：I wish I had studied harder when I was young.",
+    why:"把 wish 后的过去后悔误当成了现在/将来能力表达，用了 could study。这里不是‘我现在能学习’，而是‘我当年没有更努力学习，现在后悔’。",
+    fix:"wish 三档：对现在不满用 did/were；对过去后悔用 had done；对将来愿望/抱怨用 would do。看到 when I was young / yesterday / last year 这类过去时间，优先检查 had done。"
+  },
+  {
+    id: 86, subject:"英语", date:"2026-08-03",
+    q:"Not until he came back ___ I go to bed.",
+    mine:"that",
+    right:"did。应为 Not until he came back did I go to bed. not until 放句首时，主句要部分倒装；只有 It was not until ... that ... 这种强调句才用 that。",
+    why:"把 not until 句首倒装结构和 not until 强调句混淆了。看到 not until 就直接想 that，没有先检查句首是否有 It was。",
+    fix:"两种结构分开记：Not until + 从句 + did/does/have + 主语 + 谓语；It was not until + 从句 + that + 主语 + 谓语。"
+  },
+  {
+    id: 87, subject:"英语", date:"2026-08-03",
+    q:"He suggested that the meeting ___ put off.",
+    mine:"should",
+    right:"be 或 should be。suggest 表示建议时，从句用 (should) do；但 the meeting 和 put off 是被动关系，所以要用 (should) be put off。",
+    why:"只记住了 suggest 后用 should do，却没有检查主语 meeting 是否能主动 put off。meeting 是被推迟，必须用被动。",
+    fix:"建议/要求类虚拟也要判断主被动：人主动做事用 (should) do；事情被做用 (should) be done。"
+  },
+  {
+    id: 88, subject:"英语", date:"2026-08-03",
+    q:"The book, ___ cover is red, belongs to Mary.",
+    mine:"whom",
+    right:"whose。cover 和 book 是所属关系，表示‘这本书的封面’，定语从句中表示所属用 whose。whom 指人作宾语，不能修饰 cover。",
+    why:"把关系代词按‘人/物’粗略判断，没有识别 cover 前缺少的是所属限定词。",
+    fix:"看到 ‘___ + 名词’ 先想 whose；whose cover = the cover of which。whom 只能指人并在从句里作宾语。"
+  },
+  {
+    id: 89, subject:"英语", date:"2026-08-03",
+    q:"The meeting suggested by the manager ___ put off.",
+    mine:"was been",
+    right:"was。应为 The meeting suggested by the manager was put off. 这里 suggested by the manager 是过去分词短语作后置定语，修饰 the meeting，主句谓语是 was put off。",
+    why:"把 suggested by the manager 误当成 suggest 作谓语引导宾语从句的虚拟结构，或把被动结构叠成 was been put off。其实这里没有 that 从句，suggested 只是‘被经理建议的’这个定语。",
+    fix:"看到 suggest 先判断它是不是谓语。He suggested that the meeting (should) be put off = 建议类虚拟；The meeting suggested by him was put off = suggested 作定语，主句正常时态被动。"
+  },
+  {
+    id: 90, subject:"英语", date:"2026-08-03",
+    q:"Is this museum ___ you visited yesterday?",
+    mine:"where",
+    right:"the one 或 the one that。应为 Is this museum the one (that) you visited yesterday? 如果写 Is this the museum ___ you visited yesterday? 才可填 that/which/省略。",
+    why:"没有注意 this 后面有没有 the。Is this the museum... 中 this 是主语，the museum 是表语，可以直接接定语从句；Is this museum... 中 this museum 已经是主语，后面缺表语，需要 the one，再由 that 引导定语从句。且 visit 是及物动词，后面缺宾语，不用 where。",
+    fix:"遇到 Is this/the place 类题先看结构：Is this the place that/where...?；Is this place the one that...? 另外 visit/spend/mention 等及物动词后缺宾语，用 that/which，不用 where。"
+  },
+  {
+    id: 91, subject:"英语", date:"2026-08-03",
+    q:"Is this the house ___ you lived last year? / Is this house ___ you lived last year?",
+    mine:"that / the one",
+    right:"第一个应填 where 或 in which：Is this the house where/in which you lived last year? 第二个应填 the one where 或 the one in which：Is this house the one where/in which you lived last year?",
+    why:"只看到了 house 是地点名词，但没有检查从句结构。live 是不及物动词，you lived last year 不缺宾语，缺的是地点状语‘在那所房子里’，所以不能只用 that；如果主语是 this house，后面还要补表语 the one，再接 where/in which 从句。",
+    fix:"定语从句先看后面句子缺什么：visit/buy/mention 后缺宾语用 that/which；live/work/stay 后不缺宾语、缺地点状语，用 where/in which。遇到 Is this house... 先补 the one，再判断后面用 that 还是 where。"
+  },
+  {
+    id: 92, subject:"英语", date:"2026-08-03",
+    q:"Is this school ___ you studied last year? / Is this school ___ you visited last year?",
+    mine:"the one / the one where",
+    right:"Is this school the one where/in which you studied last year?；Is this school the one (that/which) you visited last year?",
+    why:"只注意到 this school 作主语时后面需要补表语 the one，但没有继续判断定语从句里缺的是地点状语还是宾语。study at/in school 缺地点状语，用 where/in which；visit the school 缺宾语，用 that/which/省略。",
+    fix:"两步判断：第一步，看 Is this + 名词...，先补 the one；第二步，看从句动词，study/work/live/stay 用 where/in which，visit/buy/mention 用 that/which/省略。"
+  },
+  {
+    id: 93, subject:"英语", date:"2026-08-03",
+    q:"It will be three years ___ he comes back.",
+    mine:"when",
+    right:"before。应为 It will be three years before he comes back，表示‘还要过三年他才回来’。",
+    why:"把将来时间句型误当成普通 when 时间状语从句，没有识别 It will be + 时间段 + before 的固定结构。",
+    fix:"记三组：It is/has been + 时间段 + since + 过去动作；It was + 时间段 + before + 过去动作；It will be + 时间段 + before + 现在时。before 表示‘过多久才……’。"
+  },
+  {
+    id: 94, subject:"英语", date:"2026-08-03",
+    q:"It was not until midnight ___ he finished his work.",
+    mine:"had",
+    right:"that。应为 It was not until midnight that he finished his work。not until 强调句结构是 It was not until ... that ...。",
+    why:"把 not until 强调句误当成时态填空，填了 had，没有识别 It was ... that 的强调句框架。这个点此前已错过，说明需要反复回炉。",
+    fix:"看到 It was not until ... ___ + 主语 + 谓语，空格填 that；看到 Not until ... ___ + 主语 + 动词，才填 did/does/had 等倒装助动词。"
+  },
+  {
+    id: 95, subject:"英语", date:"2026-08-03",
+    q:"having been told repeatedly that grammar is useless 中 repeatedly 修饰什么？整句如何理解？",
+    mine:"翻译成‘已经被告知重复语法是无用的’",
+    right:"repeatedly 修饰 told，意思是‘被反复告知：语法是无用的’，不是‘重复语法是无用的’。",
+    why:"看到 repeatedly 后没有判断它修饰哪个动作，误把 repeatedly 和 grammar 连在一起理解。",
+    fix:"长难句里副词先找最近且合理的动词：repeatedly told = 反复告知；carefully read = 仔细阅读；clearly understand = 清楚理解。不要直接按相邻中文硬译。"
+  },
+  {
+    id: 96, subject:"英语", date:"2026-08-03",
+    q:"Not until students learn to ask why... can they truly understand what makes a sentence powerful. 还原正常语序并解释倒装原因。",
+    mine:"认为这里强调 students；正常语序写成 Students learn to ask... they can understand...",
+    right:"Not until 放句首触发主句部分倒装，不是强调 students。正常语序是：They can truly understand what makes a sentence powerful only when/after students learn to ask why a writer chooses one structure rather than another.",
+    why:"识别出 Not until 需要倒装，但没有把 not until 表示的‘直到……才……’关系还原出来，正常语序缺少 only when/after 这层逻辑。",
+    fix:"Not until 句型两步走：先翻译‘直到 A，B 才……’；再还原为 B only when/after A。倒装只发生在主句，不倒装从句。"
+  },
+  {
+    id: 97, subject:"英语", date:"2026-08-03",
+    q:"It was this small village ___ he visited again after twenty years.",
+    mine:"the one",
+    right:"that 或 which。应为 It was this small village that/which he visited again after twenty years. 也可理解为强调句，用 that。visited 是及物动词，从句缺宾语。",
+    why:"把之前 Is this school the one... 的结构机械迁移到 It was... 句型。这里不是 Is this + 名词缺表语，而是 It was + 被强调/被修饰名词 + 从句，不需要 the one。",
+    fix:"the one 主要用于 Is this + 名词 + the one... 这类主语已完整、后面缺表语的句子。看到 It was + 名词 + 空格，先考虑强调句 that 或定语从句 that/which/where。"
+  },
+  {
+    id: 98, subject:"英语", date:"2026-08-03",
+    q:"Without your warning, I ___ made the same mistake. (would)",
+    mine:"would had",
+    right:"would have。完整为 Without your warning, I would have made the same mistake. without 引出与过去事实相反的含蓄条件，结果句用 would have done。",
+    why:"把过去虚拟结果句 would have done 误写成 would had done。情态动词 would 后必须接动词原形，不能接 had。",
+    fix:"情态动词后接原形：would have done / could have done / might have done。看到 without + 过去语境，结果优先检查 would/could/might have done。"
+  },
+
 ];
 
 let data = load();
