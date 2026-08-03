@@ -3,6 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
 <title>我的错题本 · 高中全科</title>
 <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📕</text></svg>">
 <!-- ===== 加到主屏当 App 用的配置 ===== -->
@@ -225,7 +228,8 @@
 <script>
 /* ================= 数据层 ================= */
 const SUBJECTS = ['语文','数学','英语','物理','化学','生物','政治','历史','地理'];
-const KEY = 'my_mistake_book_v1';
+const KEY = 'my_mistake_book_v2';
+const OLD_KEYS = ['my_mistake_book_v1'];
 
 // 首次打开时，用今天真实答错的英语题作为种子（之后所有增删都存在浏览器里）
 const SEED = [
@@ -1020,16 +1024,28 @@ let filter = 'all';
 
 function load() {
   try {
-    const raw = localStorage.getItem(KEY);
-    if (raw === null) { localStorage.setItem(KEY, JSON.stringify(SEED)); return SEED.slice(); }
-    const stored = JSON.parse(raw);
-    if (!Array.isArray(stored)) return SEED.slice();
-    // 自动合并：把源码里新增、但本地还没有的种子错题补进来（按 id 去重，
-    // 不动用户已有的错题和勾选状态）。这样每次更新源码 push 后，刷新即可看到新题。
-    const ids = new Set(stored.map(x => x.id));
-    const fresh = SEED.filter(s => !ids.has(s.id));
-    if (fresh.length) { const merged = stored.concat(fresh); localStorage.setItem(KEY, JSON.stringify(merged)); return merged; }
-    return stored;
+    const merged = [];
+    const ids = new Set();
+    const add = entries => {
+      if (!Array.isArray(entries)) return;
+      for (const e of entries) {
+        if (!e || typeof e !== 'object') continue;
+        const id = e.id ?? `${e.subject || ''}|${e.date || ''}|${e.q || ''}`;
+        if (ids.has(id)) continue;
+        ids.add(id);
+        merged.push(e);
+      }
+    };
+    const read = key => {
+      const raw = localStorage.getItem(key);
+      if (raw === null) return [];
+      try { return JSON.parse(raw); } catch (e) { return []; }
+    };
+    add(SEED);
+    add(read(KEY));
+    for (const oldKey of OLD_KEYS) add(read(oldKey));
+    localStorage.setItem(KEY, JSON.stringify(merged));
+    return merged;
   } catch (e) { return SEED.slice(); }
 }
 function save() { try { localStorage.setItem(KEY, JSON.stringify(data)); } catch (e) {} }
