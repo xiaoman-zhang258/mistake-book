@@ -1064,6 +1064,54 @@ const SEED = [
     why:"把 few 的否定意味和 ever 叠加成了双重否定，译出「从未追问过」。这在语义上是反的：「很少有学生问过」= 绝大多数没问；「很少的学生从未问过」= 绝大多数问过。方向刚好相反。另外把 matter 译成「有用」，标准译法是「重要、要紧、有意义」。",
     fix:"few / little / hardly / seldom 这类词本身就是否定，句中的动词若是肯定形式就照肯定译：so few ... had ever asked = 极少有人曾问过。自查法：译完把句子换个说法反推一遍——「极少有人问过」等于「几乎没人问」，和原文一致就对。matter 作动词固定译「重要、要紧」。"
   },
+  {
+    id: 105, subject:"英语", date:"2026-08-06",
+    q:"长难句拆解：The idea that the earth was round, which had been dismissed for centuries, was finally accepted by scholars. —— 主干是什么？（同类：Not until the data ... was re-examined did the team realize ...）",
+    mine:"主：The idea，谓：was，表：accepted（第二句同样答成「主 the data，谓 was，表 re-examined」）",
+    right:"was accepted by scholars 是【被动语态】，was accepted 整体作谓语，by scholars 是施动者状语，不存在表语。主干＝The idea(主) + was finally accepted(谓·被动)。同理 was re-examined 也是被动。",
+    why:"把 8/4 学的「be 动词后面叫表语不叫宾语」过度推广成了「be 后面一律是表语」。那条规则只管【系动词】，不管【助动词】——被动语态里的 be 和 have done 里的 have 一样是助动词，不是系动词。一节课内连错两次。",
+    fix:"be + 过去分词，用替换法判断：能换成 got 且通顺＝被动（动作），能换成 seemed/looked 且通顺＝系表（状态）。The window got broken by a stone＝被动；The window looked broken when I got home＝系表。辅助判据：有 by 施动者必是被动；但没有 by 也可能是被动（The window was broken last night），所以不能靠「有没有 by」下结论。还要看时间状语性质：指动作发生的时间＝被动，指状态存在的时刻＝系表。"
+  },
+  {
+    id: 106, subject:"英语", date:"2026-08-06",
+    q:"长难句拆解：the data collected from the trial —— collected from the trial 是什么结构？",
+    mine:"是定语从句，主语是 the data，后面省略了 that",
+    right:"是【过去分词短语作后置定语】，不是从句。若只补 that 会变成病句：the data that collected from the trial ❌（that 作主语时后面必须跟谓语动词，collected 若作谓语则语义变成「数据收集了某物」，主动语态讲不通）。正确还原是 the data 【that was】 collected from the trial —— 省略的是【关系词 + be 动词】两个一起。",
+    why:"只想到省略了关系词，没想到 be 动词也被一起省掉了。而 be 一旦省掉，从句就失去谓语动词，身份随之改变——不再是从句。这是 8/4「the amount of data collected 误判为宾语从句」的同一原理，已是第三次栽在「分词 vs 从句」上。",
+    fix:"从句的身份证是【谓语动词】，谓语没了身份就变了。定语从句省略规则：①关系词作【主语】时，只能「关系词 + be」一起省，省完剩下的分词短语已不是从句（the data (that was) collected）；②关系词作【宾语】时，可单独省关系词，剩下的仍是从句，因为主语和谓语都还在（the book (that) I read —— I read 有主谓）。判定口诀：省完之后数一数还有没有独立的主语+谓语动词，没有就不是从句。"
+  },
+  {
+    id: 107, subject:"英语", date:"2026-08-06",
+    q:"长难句拆解：Not until the data ... was re-examined did the team realize that the assumption was flawed. —— 整句主干是什么？",
+    mine:"主：the data，谓：was，表：re-examined（只说了「倒装」，但把 Not until 状语内部的主谓当成了整句主干）",
+    right:"Not until 引导的整块是【时间状语】，the data was re-examined 只是状语内部的小主干。整句真正的主干是倒装还原后的：the team(主) + realized(谓) + that the assumption ... was flawed(宾语从句)。还原语序：The team did not realize that... until the data was re-examined.",
+    why:"识别出了倒装，但没做「还原成陈述语序」这一步就直接找主干，于是抓住了离句首最近的那个主谓。Not until 提前后主句要部分倒装，助动词 did 被提到主语前，主句谓语被拆成了两半（did ... realize），视觉上不显眼，就被跳过了。",
+    fix:"倒装句拆解口诀：看到 did/does/were/has 这类助动词跑到主语前面，先【还原成陈述语序】再找主干——助动词出现的地方才是主句谓语所在。常见触发部分倒装的句首成分：Not until...、Only+状语、Never/Seldom/Hardly/Little 等否定副词、So/Neither 开头。注意 Not until 后面那一整块无论多长都只是状语，不是主句。"
+  },
+  {
+    id: 108, subject:"英语", date:"2026-08-06",
+    q:"长难句拆解：..., most of which had been ignored for years, ... —— 这是什么结构？先行词是谁？",
+    mine:"答成「most of which 省略了」，没有说出结构名称，也没有指出先行词",
+    right:"这是【「量词/代词 + of + which」引导的非限制性定语从句】，先行词是 the data。which 作介词 of 的宾语，most of which 整体作从句主语，had been ignored 是从句谓语。",
+    why:"看到两个逗号夹住的成分，只认出「有东西被省了」，没有按铁律三真正判定它是哪一种插入成分。8/4 学过的独立主格（most of them from ordinary families）和这里的定语从句长得极像，只差有没有谓语动词，没有做这一步区分。",
+    fix:"「量词 + of + 关系词」三种形态必须分清：①most of which had been ignored —— 有关系词 which、有谓语 → 【定语从句】；②most of them from ordinary families —— 用人称代词 them、无谓语动词 → 【独立主格/插入语】；③most of them had been ignored —— 用 them 又带谓语，且只用逗号连接 → 【病句·逗号粘连】，必须改成 and most of them 或改用 which。判别口诀：用 which/whom 的是定语从句，用 them/it 的后面绝不能有谓语。同类表达：some of which、all of whom、the majority of which、both of which。"
+  },
+  {
+    id: 109, subject:"英语", date:"2026-08-06",
+    q:"长难句拆解：the assumption they had relied on —— 省略了什么？被省的那个词在从句里作什么成分？",
+    mine:"省掉的是 that，that 在这里仅作为引导的作用",
+    right:"省的确实是 that（或 which），但它【在从句中作 relied on 的宾语】（rely on sth，介词 on 后面缺宾语），不是「仅作引导」。正因为它作宾语，才允许省略。",
+    why:"把定语从句的关系词说成「仅作引导、不作成分」，这其实是【同位语从句】那个 that 的特征，两者混了。而且逻辑上自相矛盾：若真的不作成分（同位语从句的 that），反而一个字都不能省。",
+    fix:"两条一起记：①区分同位语从句和定语从句，唯一标准是关系词在从句内作不作成分——不作成分＝同位语从句（the fact that he lied），作成分＝定语从句（the assumption that they had relied on，作宾语）。②关系词能不能省，取决于它作什么成分——作【宾语】可省（the book (that) I read、the assumption (that) they relied on），作【主语】不可省（the man that lives here 中的 that 不能删）。同位语从句的 that 虽不作成分，但同样不能省。"
+  },
+  {
+    id: 110, subject:"英语", date:"2026-08-06",
+    q:"翻译：Few of the researchers involved had ever questioned the assumption.",
+    mine:"很少有研究者曾经怀疑过这个设想（involved 整个漏译）",
+    right:"参与该研究的人当中，极少有人曾质疑过这一假设。involved 是过去分词作【后置定语】修饰 the researchers，意为「参与其中的、相关的」。",
+    why:"few + ever 的否定陷阱这次躲过去了（没译成双重否定，8/4 的错点已改正），但整个漏掉了名词后面的分词定语 involved。原因是只盯着句子主干和否定词，名词后面单独一个词的修饰成分被当成了无关紧要的东西跳过。",
+    fix:"有一批分词/形容词【前置和后置意思不同】，跟在名词后面时一律译「相关的/参与的/在场的」：the people involved 相关的人（vs an involved question 复杂的问题）；the people present 在场的人（vs the present situation 目前的情况）；the parties concerned 相关各方（vs a concerned look 担忧的表情）。此外 the person responsible（负责的人）、the members available（有空的成员）同理。看到名词后紧跟这几个词，先停一秒确认它是后置定语，不要漏译。"
+  },
 
 ];
 
