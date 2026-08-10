@@ -1112,6 +1112,54 @@ const SEED = [
     why:"few + ever 的否定陷阱这次躲过去了（没译成双重否定，8/4 的错点已改正），但整个漏掉了名词后面的分词定语 involved。原因是只盯着句子主干和否定词，名词后面单独一个词的修饰成分被当成了无关紧要的东西跳过。",
     fix:"有一批分词/形容词【前置和后置意思不同】，跟在名词后面时一律译「相关的/参与的/在场的」：the people involved 相关的人（vs an involved question 复杂的问题）；the people present 在场的人（vs the present situation 目前的情况）；the parties concerned 相关各方（vs a concerned look 担忧的表情）。此外 the person responsible（负责的人）、the members available（有空的成员）同理。看到名词后紧跟这几个词，先停一秒确认它是后置定语，不要漏译。"
   },
+  {
+    id: 111, subject:"英语", date:"2026-08-10",
+    q:"The report published last month describes a technique which allows researchers to measure changes in soil temperature without disturbing the plants growing above it. —— in soil temperature 是什么成分？",
+    mine:"是定语从句，先行词是 changes，省略了 that",
+    right:"介词短语作后置定语，修饰 changes。既不是从句，也不存在「单独省略 that」这回事",
+    why:"看到名词后面跟一坨修饰成分就当成从句，没有先数谓语动词。in soil temperature 里一个带时态的动词都没有。还把「省略」理解成可以单省一个 that",
+    fix:"从句的身份证是「带时态的谓语动词」。先数谓语动词，有几个就有几个句子。后置定语有 4 种做法：定语从句(有主谓)、分词短语、介词短语、形容词短语——只有第一种是从句。定语从句省略只能省「关系词+be」一起走，省完就降级成短语，不再叫从句。（分词/短语误判为从句，第 4 次）"
+  },
+  {
+    id: 112, subject:"英语", date:"2026-08-10",
+    q:"The scientists reported the accident described in the news last week. —— reported 是谓语还是分词定语？",
+    mine:"分词定语",
+    right:"reported 是主句谓语；described 才是分词定语",
+    why:"看错了问的是哪个词，把 described 的身份答成了 reported 的。判据本身会用，但没用上",
+    fix:"答题前先把问的对象圈出来。判 -ed 两步：①拿掉它全句还有没有谓语？没有→它就是谓语 ②名词跟这个动词是主动还是被动？被动→分词定语。scientists 主动 report，accident 被 describe"
+  },
+  {
+    id: 113, subject:"英语", date:"2026-08-10",
+    q:"..., most of its members agreeing that the current rules need revision. —— that 在从句内作什么成分？",
+    mine:"that 充当主语",
+    right:"that 不作任何成分，只起引导作用，因此可以省略",
+    why:"判据知道但没真去验，凭印象答。上一句同位语从句刚判对「不作成分」，这句就答反了",
+    fix:"拿掉 that 念一遍：the current rules need revision，主谓宾齐全→that 不作成分。硬规律：that 引导的宾语从句/同位语从句里，that 永远不作成分、永远可省；只有定语从句里的 that 才作成分（主语或宾语）"
+  },
+  {
+    id: 114, subject:"英语", date:"2026-08-10",
+    q:"把 It was not until the government released the full data that researchers began to question the official estimate. 改写成 Not until 开头的倒装句",
+    mine:"Not until was it did the government release the full data that researchers began to question...（连续两次同类错）",
+    right:"Not until the government released the full data did researchers begin to question the official estimate.",
+    why:"以为倒装是强调句的一种变体，所以留着 It was/that 的零件又加了 did，两套零件混装。更核心的是把倒装用在了 until 从句里(did the government release)，主句反而一动没动——分不清哪块是状语、哪块是主干",
+    fix:"强调句和倒装是两台独立的机器：强调句必须有 It is/was...that 且 that 后正常语序；倒装没有 It 没有 that，主句部分倒装。口诀「要么倒装，要么 that，二选一不能双份」。改写三步(顺序不能反)：①先不管状语，只找主句并倒装(助动词提前、主动词变原形 began→begin) ②最后才把状语整块搬到句首 ③状语内部一个字不动。另：until 是手铐负责造从句，not 才是触发倒装的否定词"
+  },
+  {
+    id: 115, subject:"英语", date:"2026-08-10",
+    q:"Whether the new policy will reduce emissions depends largely on the fact that most factories in the region still rely on coal for their daily production. —— 翻译",
+    mine:"新政策是否将减少排放量很大程度上取决于那些在区域内为了日常产量而仍然依赖煤的大部分工厂",
+    right:"新政策能否减少排放，很大程度上取决于这样一个事实：该地区大多数工厂在日常生产中仍然依赖煤炭",
+    why:"第 3 步已经判出是同位语从句，翻译时又当成定语去修饰 factories，把 the fact 这个中心词整个丢了。意思也变了——原句说取决于「一个事实」，译文变成取决于「工厂」",
+    fix:"同位语从句译法固定两种：①顺译「取决于这样一个事实：……」②前置「……这一事实」。「事实/观点/消息/设想」这个中心词必须留在译文里当中心词，从句是来解释它内容的，不是来限定别的名词的。判对了还要用得上"
+  },
+  {
+    id: 116, subject:"英语", date:"2026-08-10",
+    q:"学术语境下 report / paper / revision 怎么译（journal 期刊、publish 发表、rejected twice 拒稿两次）",
+    mine:"report→报道（第 2 次错）、paper→报纸、revision→改变",
+    right:"report→报告、paper→论文、revision→修订",
+    why:"背了一个中文对应就到处套，没看语境挑词义。生词表已经给了「修订」也没用上",
+    fix:"先定文体(学术/新闻/日常)，再挑词义。看到 journal、publish、reject 这组词就锁定学术语境：paper=论文、report=报告、revision=修订。题目给了生词表就必须用给的词义，别自己另造"
+  },
 
 ];
 
