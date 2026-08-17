@@ -2,7 +2,7 @@
 
 一个能陪你三年的错题本。**单个 HTML 文件，打开即用，数据存在浏览器里不上传。**
 
-👉 **[点这里打开错题本](https://vyduy9405-alt.github.io/mistake-book/)**（手机、电脑都能用）
+👉 **[点这里打开错题本](https://xiaoman-zhang258.github.io/mistake-book/)**（手机、电脑都能用）
 
 ## 特点
 
