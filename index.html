@@ -1149,16 +1149,48 @@ const SEED = [
     q:"Whether the new policy will reduce emissions depends largely on the fact that most factories in the region still rely on coal for their daily production. —— 翻译",
     mine:"新政策是否将减少排放量很大程度上取决于那些在区域内为了日常产量而仍然依赖煤的大部分工厂",
     right:"新政策能否减少排放，很大程度上取决于这样一个事实：该地区大多数工厂在日常生产中仍然依赖煤炭",
-    why:"第 3 步已经判出是同位语从句，翻译时又当成定语去修饰 factories，把 the fact 这个中心词整个丢了。意思也变了——原句说取决于「一个事实」，译文变成取决于「工厂」",
-    fix:"同位语从句译法固定两种：①顺译「取决于这样一个事实：……」②前置「……这一事实」。「事实/观点/消息/设想」这个中心词必须留在译文里当中心词，从句是来解释它内容的，不是来限定别的名词的。判对了还要用得上"
+    why:"第 3 步已经判出是同位语从句，翻译时又当成定语去修饰 factories，把 the fact 这个中心词整个丢了。意思也变了——原句说取决于「一个事实」，译文变成取决于「工厂」。【2026-08-17 第 2 次复发】challenges the assumption that... 又译成「……的这一设想」，同位语再次被压成定语",
+    fix:"同位语从句译法固定两种：①顺译「取决于这样一个事实：……」②前置「……这一事实」。「事实/观点/消息/设想」这个中心词必须留在译文里当中心词，从句是来解释它内容的，不是来限定别的名词的。判对了还要用得上。【2026-08-17 新增机械三步】① 先把主句译到能打句号为止「这份报告对一种假设提出了挑战。」② 句号改成破折号 ③ 接 that 的内容，前面加「即」。关键在第 1 步必须先让中文句子站稳，不许憋着不打句号把内容全堆到名词前面"
   },
   {
     id: 116, subject:"英语", date:"2026-08-10",
     q:"学术语境下 report / paper / revision 怎么译（journal 期刊、publish 发表、rejected twice 拒稿两次）",
-    mine:"report→报道（第 2 次错）、paper→报纸、revision→改变",
+    mine:"report→报道（第 2 次错；2026-08-17 第 3 次又译成「报道」）、paper→报纸、revision→改变",
     right:"report→报告、paper→论文、revision→修订",
-    why:"背了一个中文对应就到处套，没看语境挑词义。生词表已经给了「修订」也没用上",
+    why:"背了一个中文对应就到处套，没看语境挑词义。生词表已经给了「修订」也没用上。【2026-08-17 第 3 次复发】The report, published... by a team of scientists 里又译成「报道」——published/scientists/team 三个词已经锁死学术语境了还是没换词义",
     fix:"先定文体(学术/新闻/日常)，再挑词义。看到 journal、publish、reject 这组词就锁定学术语境：paper=论文、report=报告、revision=修订。题目给了生词表就必须用给的词义，别自己另造"
+  },
+  {
+    id: 117, subject:"英语", date:"2026-08-17",
+    q:"economic growth automatically improves public health —— 翻译",
+    mine:"经济自然增长提升公共健康（把 automatically 挂到了主语 growth 上）",
+    right:"经济增长会自动改善公众健康（automatically 修饰谓语 improves）",
+    why:"看到 automatically 紧跟在名词 growth 后面，就以为它修饰 growth。意思整个变了：原句批判的是「只要增长，健康就会自动变好」这个想当然的逻辑，译成「经济自然地增长」后批判对象消失了",
+    fix:"判据不是位置，是词性——【副词从来不修饰名词】。副词只能挂在动词、形容词、副词或整句上。所以 automatically 站哪儿都不可能修饰 growth，往它后面最近的那个动词上挂。我自己说的「名词后面不能跟副词」不对（the meeting yesterday 就有），要用词性这条硬的"
+  },
+  {
+    id: 118, subject:"英语", date:"2026-08-17",
+    q:"have a say in how it is used / arguing about the final clause —— 翻译",
+    mine:"拥有「在它如何被使用中的」任何真正的发言权；仍然在争论「关于」最终条款",
+    right:"对这些数据如何被使用有真正的发言权；仍在为最后一项条款争论不休",
+    why:"把英语介词一对一直译成中文介词。同一天三次复发（in how it is used / rise in soil temperature / arguing about）。根本原因：中文动词自己就能直接带宾语，不需要介词搭桥；英语很多动词是半成品，得靠介词才够得着宾语",
+    fix:"【英语「动词+介词」固定搭配，中译时介词通常蒸发】argue about X→争论X、think about X→考虑X、wait for X→等X、listen to X→听X、care for X→照顾X；少数转成中文介词：have a say in X→【对】X有发言权、depend on X→取决【于】X。还有名词搭配 rise/decline/increase/change + in X = 「X 的上升/下滑」，不是「在X中」"
+  },
+  {
+    id: 119, subject:"英语", date:"2026-08-17",
+    q:"长难句中译时，修饰成分该放哪儿（方法型）",
+    mine:"「这个上周被一个由来自三个国家工作的科学家组成的团队所公布的报道」——38 个字的定语压在「报道」两个字前面",
+    right:"「这份报告由一个在三个不同国家工作的科学家团队于上周发表，它对一种假设提出了挑战——即……」拆成两句",
+    why:"习惯把所有修饰成分往名词前面堆。英语可以往后挂（后置定语、介词短语、从句），中文的定语只能放前面，堆超过 10 个字就读不动了。这个病和同位语压定语(#115)、介词直译(#118)是同一个根",
+    fix:"【中文定语一超过 10 个字就停手】把它拆到名词后面另起一句，或者转成动词。配套的切块法：看不懂的长句先下刀，刀口在四处——①逗号处 ②介词前 ③分词前 ④从句引导词前。切完每一块都是会的，长难句难在长不难在深"
+  },
+  {
+    id: 120, subject:"英语", date:"2026-08-17",
+    q:"He did not realize how serious the problem was until the second report came out. —— 改成强调句",
+    mine:"It was the second report came out that he did not realize how serious the problem was.",
+    right:"It was not until the second report came out that he realized how serious the problem was.",
+    why:"不知道 not 归 until 管。把 not 留在了后半句，导致：①被强调部分变成一个完整句子 the second report came out，语法崩了 ②that 从句里还留着 not，意思反了（变成「直到……他才没意识到」）。同一天的倒装句写对了，因为 Not until 开头时 not 自然跟着走，没机会分错",
+    fix:"【not until 是一个整体，not 是给 until 的不是给动词的】陈述句里 not 只是暂时寄放在助动词上。分块要这样分：[not until + 状语] + [主句(肯定形式)]。强调句就是把带 not 的整块搬进 It was ... that 之间，箱子里一件都不能掉；主句失去 not 后还原成肯定：did not realize → realized。自查动作：写完用中文念「直到……才……」，念出来意思反了就是 not 放错了"
   },
 
 ];
