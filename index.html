@@ -1392,6 +1392,14 @@ const SEED = [
     why:"强调句框架和主句时态已经对了，但 until 从句里的 failed 被误改成 fail。误以为强调句会让从句动词变原形；实际上 It was not until...that... 里 until 从句和 that 后主句都保持原句时态。",
     fix:"not until 强调句只做两件事：把 not until + 时间/从句整块搬到 It was 后；that 后主句去掉 not 变肯定。不要改 until 从句时态。自查两个动词：until 从句 failed，that 后主句 realized，都应是过去式。"
   },
+  {
+    id: 146, subject:"化学", date:"2026-08-29",
+    q:"判断 NH4HCO3 是否为酸式盐，并说明理由。",
+    mine:"不是，酸根里没有 H。",
+    right:"是酸式盐。NH4HCO3 由 NH4+ 和 HCO3− 构成，酸根 HCO3− 里还保留可电离的 H，所以属于酸式盐。",
+    why:"没有先拆离子，把 NH4HCO3 看成一整串，误判酸根里没有 H；实际上 NH4+ 是阳离子，HCO3− 才是酸根，H 在酸根里。",
+    fix:"判断酸式盐三步：①先确认是盐；②拆成阳离子 + 酸根；③只看酸根里是否还有可电离 H。NH4+ 里的 H 不算酸根 H，HCO3− / HSO4− / H2PO4− 里的 H 才算。"
+  },
 
 ];
 
