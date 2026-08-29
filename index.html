@@ -1368,6 +1368,22 @@ const SEED = [
     why:"把“有两个交点”的 Δ > 0 误当成了“恒大于0”的条件，忘了恒大于0要求整条抛物线在 x 轴上方。",
     fix:"二次恒成立先看方向再看交点：>0 恒成立 => 开口向上 + Δ < 0；≥0 恒成立 => 开口向上 + Δ ≤ 0；<0 恒成立 => 开口向下 + Δ < 0；≤0 恒成立 => 开口向下 + Δ ≤ 0。"
   },
+  {
+    id: 143, subject:"英语", date:"2026-08-29",
+    q:"翻译短语并说明 over 的意思：the data collected over three decades",
+    mine:"这数据来自于三十年前",
+    right:"历时三十年收集的数据 / 在三十年间收集的数据。over + 时间段表示“在……期间、历时……”，不是“三十年前”。",
+    why:"把 over + 时间段误解成 ago，把一段持续时间译成了过去某个时间点；同时把 collected 的“收集”动作漏掉了。这是 #129 的复发。",
+    fix:"看到 over + 一段时间（over three years / over decades）先译“在……期间、历时……”。自查：如果英文是时间段，中文不能变成“……年前”这种时间点。"
+  },
+  {
+    id: 144, subject:"英语", date:"2026-08-29",
+    q:"用 It was not until...that... 改写：The students did not understand the value of revision until they compared the first draft with the final version.",
+    mine:"It was not until the students compared the first draft with the final version that they understand the value of revision.",
+    right:"It was not until the students compared the first draft with the final version that they understood the value of revision.",
+    why:"强调句结构搭对了，但 that 后面的主句动词没有保留原句过去时，写成 understand。这是 #132 的复发。",
+    fix:"not until 强调句：It was not until + 时间/从句 + that + 肯定主句。that 后是完整陈述句，没有 did 帮忙，动词必须自己带原句时态：did not understand -> understood。"
+  },
 
 ];
 
