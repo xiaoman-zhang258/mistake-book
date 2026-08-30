@@ -1448,6 +1448,14 @@ const SEED = [
     why:"只给出开区间 0<a<4，漏掉了三个边界：a=0 时 B=(0,1) 仍在 A=[0,4) 内；a=1 时 B=∅，空集一定是 A 的子集；a=4 时 B=(1,4)，不含 4，也仍在 A 内。",
     fix:"集合包含题必须逐个检查边界能不能取：B 是严格 <0，端点不属于 B；A 左端 0 是闭的，右端 4 是开的。空集分支 a=1 单独保留。最后用具体代入 a=0、a=1、a=4 自查边界。"
   },
+  {
+    id: 153, subject:"英语", date:"2026-08-30",
+    q:"判断 account for 在句中的意思：The data account for nearly 40% of the total.",
+    mine:"解释……的原因",
+    right:"占……比例。句意：这些数据占总量的近 40%。account for 接百分比、比例、数量时通常表示“占”。",
+    why:"只记住了 account for 的“解释原因”义项，没有根据后面的 nearly 40% of the total 切换到比例义。",
+    fix:"account for 双义项看宾语：接原因/现象 => 解释……的原因；接百分比/比例/数量 => 占……比例。看到 40%、half、most of、the total 这类数量词，优先译“占”。"
+  },
 
 ];
 
