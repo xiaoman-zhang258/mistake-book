@@ -1736,6 +1736,14 @@ const SEED = [
     why:"抽象函数定义域反解时把 −1≤2x−1≤3 错解成 [-3,5]，没有按‘两边先加 1，再除以 2’做；第二段虽然分离常数思路接近，但值域只写了上界 3 以下，漏了 x>2 导致 x−1>1，从而 2/(x−1)<2，所以下界是 1 而不是 −∞。",
     fix:"抽象定义域反解固定写三行：−1≤2x−1≤3；0≤2x≤4；0≤x≤2。分离常数后看内层范围：x>2 ⇒ x−1>1 ⇒ 0<2/(x−1)<2 ⇒ 1<3−2/(x−1)<3。值域不要只看趋近值，还要看分母最小范围给出的另一端。"
   },
+  {
+    id: 189, subject:"英语", date:"2026-09-03",
+    q:"语境句：Good readers draw on context instead of translating every word. 判断 draw on 在句中的意思。",
+    mine:"摘录。",
+    right:"利用、借助。整句：优秀读者会借助上下文，而不是逐词翻译。",
+    why:"把 draw on 和 be drawn from 混在一起了。be drawn from 是‘来自、取自’，但主动结构 draw on 后接 context / experience / evidence 时表示‘利用、借助’。",
+    fix:"看到 draw on + context/experience/evidence/resources，先译‘利用、借助’；看到 be drawn from + 来源，才译‘来自、取自’。主动 draw on ≠ 被动 be drawn from。"
+  },
 
 ];
 
