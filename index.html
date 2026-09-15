@@ -2085,7 +2085,15 @@ const SEED = [
     right:"学生通过解决熟悉的练习题获得的自信，不一定能迁移到陌生问题上。句子结构：The confidence [(that) students gain from solving familiar exercises] / does not always carry over to unfamiliar problems.",
     why:"把相邻的 confidence students 直接拼成“自信的学生”，没有先找两个谓语 gain 与 does carry；因此漏认了省略关系代词 that 的定语从句，错把修饰 confidence 的 students gain... 当成主句的一部分。目标词块 carry over to 和 does not always 的方向实际判断正确。",
     fix:"遇到“名词 + 名词/代词 + 动词”时，先测试中间是否省略 that/which。先圈所有谓语：带助动词 does 的 carry 是主句谓语，students gain... 因而是修饰 confidence 的定语从句。固定切分：the confidence / (that) students gain... / does not always carry over...。2026-09-13 当轮迁移句 The habits students form at school... 已正确补出 that 并译出主干，当前为纠错后 L2，待延迟无提示复测。"
+  },  {
+    id: 233, subject:"数学", date:"2026-09-15",
+    q:"已知a>0，b>0，a+3b=1，求(b²+2a+1)/(ab)的最小值，并验证基本不等式的等号能否取到。",
+    mine:"由等号条件化出17b²−18b+3=0，认为还要检查a+3b=1；没有识别出该二次方程已经由原等式代入得到，也没有检查a>0、b>0和平方前的等号条件。",
+    right:"基本不等式的原始取等条件是3a/b=10b/a。因a,b>0，可得a/b=√(10/3)。令r=√(10/3)>0，则由a=rb和a+3b=1得b=1/(r+3)>0、a=r/(r+3)>0，所以等号可以取到。若走二次方程路线，还必须逐根回代检查正数定义域及平方前条件。",
+    why:"把‘二次方程有解’误当成‘原问题中等号可取’，没有区分变形后的方程条件、原约束和定义域；平方还可能保留不符合原符号条件的根。",
+    fix:"取等检查固定三步：①写出基本不等式原始等号条件；②与题设约束联立；③检查定义域、符号以及所有等号能否同时成立。能用正比关系证明存在时，不必硬算具体根。"
   },
+
 ];
 
 let data = load();
