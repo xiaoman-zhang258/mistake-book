@@ -2086,15 +2086,6 @@ const SEED = [
     why:"把相邻的 confidence students 直接拼成“自信的学生”，没有先找两个谓语 gain 与 does carry；因此漏认了省略关系代词 that 的定语从句，错把修饰 confidence 的 students gain... 当成主句的一部分。目标词块 carry over to 和 does not always 的方向实际判断正确。",
     fix:"遇到“名词 + 名词/代词 + 动词”时，先测试中间是否省略 that/which。先圈所有谓语：带助动词 does 的 carry 是主句谓语，students gain... 因而是修饰 confidence 的定语从句。固定切分：the confidence / (that) students gain... / does not always carry over...。2026-09-13 当轮迁移句 The habits students form at school... 已正确补出 that 并译出主干，当前为纠错后 L2，待延迟无提示复测。"
   },
-  {
-    id: 233, subject:"物理", date:"2026-09-15",
-    q:"汽车匀减速至停止，第1秒位移12 m，第4秒位移0.5 m。用倒放成初速度为0的匀加速运动求解。",
-    mine:"设原运动3 s后再经过t秒停车，却列0.5=a/2·(1+t)²−a/2，12=a/2·(4+t)²−a/2·(3+t)²。",
-    right:"倒放计时应从停车瞬间记为0。原运动3 s到停车的t秒，对应倒放的0到t秒，所以0.5=at²/2；原运动0到1 s对应倒放的t+2到t+3秒，所以12=a[(t+3)²−(t+2)²]/2。倒放加速度a取正值，原运动加速度为−a。",
-    why:"虽然正确设出了停车发生在3+t秒，但倒放时没有重新确定时间零点，把两个倒放区间都整体向后错移了1秒。",
-    fix:"画双向时间轴。先写总刹车时间T=3+t，再用映射：原时刻x ↔ 倒放时刻T−x。逐个端点映射后再列位移式；特别记住原运动最后t秒就是倒放最初t秒。"
-  },
-
 ];
 
 let data = load();
