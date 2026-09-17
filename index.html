@@ -2126,6 +2126,14 @@ const SEED = [
     why:"判断二次式符号时随意给x₁x₂设了错误上界，且端点代入没有逐项计算x³、2x、m，导致两端函数值和参数范围整体偏移。",
     fix:"作差后的括号用配方或恒等式证明恒正，不单独猜x₁x₂的符号；端点代入固定逐项写：g(端点)=(端点)³+2(端点)+m，算完再用原式复核。"
   },
+  {
+    id: 238, subject:"英语", date:"2026-09-17",
+    q:"翻译：Students who are prone to interpret every setback as evidence of limited ability may find it helpful to compare their progress with that of others, a practice that can put temporary difficulties into perspective before they take on more importance than they deserve. 并说明they的指代。",
+    mine:"易于将每个反馈解释为能力有限的证据的学生可能会发现：将他们的进步和其他同学相比是有用的 一个在他们显示出他们值得的重要性，可以将面对困境合理考虑的练习。第2、3问漏答。",
+    right:"容易把每次挫折都看作能力有限证据的学生，可能会觉得把自己的进步与他人的进步作比较很有帮助。这种做法能使他们客观看待暂时的困难，避免把这些困难看得比实际应有的更重要。that of others中的that代替progress；a practice同位解释前面的比较行为，其后的that引导定语从句；they指temporary difficulties。",
+    why:"把setback误认成feedback；没有识别that替代前面的progress；把a practice that...与before从句串错，导致they没有回指最近的复数名词temporary difficulties。另有多问漏答，未逐项回应词块义和代词指代。",
+    fix:"长句先圈指代链：that of others→progress；a practice→compare这一做法；关系词that→修饰practice；they→最近且语义合理的复数temporary difficulties。翻译前先切三段：主句｜同位语a practice｜before从句。答完按题号逐问核对。"
+  },
 
 ];
 
