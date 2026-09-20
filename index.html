@@ -2134,6 +2134,14 @@ const SEED = [
     why:"把setback误认成feedback；没有识别that替代前面的progress；把a practice that...与before从句串错，导致they没有回指最近的复数名词temporary difficulties。另有多问漏答，未逐项回应词块义和代词指代。",
     fix:"长句先圈指代链：that of others→progress；a practice→compare这一做法；关系词that→修饰practice；they→最近且语义合理的复数temporary difficulties。翻译前先切三段：主句｜同位语a practice｜before从句。答完按题号逐问核对。"
   },
+  {
+    id: 239, subject:"数学", date:"2026-09-20",
+    q:"设 fₘ(x)=x³+x²+2x+m。任取 −1<x₁<x₂<1，用作差法证明 fₘ(x) 严格递增。",
+    mine:"写成 f(x₁)−f(x₂)=(x₁+x₂)(x₁²−x₁x₂+x₂²+x₁−x₂−2)，随后无法判断符号。",
+    right:"应统一提取公因式 x₁−x₂：f(x₁)−f(x₂)=(x₁−x₂)[x₁²+x₁x₂+x₂²+x₁+x₂+2]。其中 x₁²+x₁x₂+x₂²≥0，且 x₁+x₂+2>0，所以方括号内>0；又 x₁−x₂<0，故 f(x₁)<f(x₂)，函数严格递增。",
+    why:"把立方差、平方差和一次差的公因式混成 x₁+x₂，且立方差公式中的中间项符号写错，导致错误分解后无法判断符号。",
+    fix:"作差后按次数逐项分解并核对统一公因式：a³−b³=(a−b)(a²+ab+b²)，a²−b²=(a−b)(a+b)，2a−2b=2(a−b)。全部都有 a−b 后再合并；最后展开一项自查。"
+  },
 
 ];
 
