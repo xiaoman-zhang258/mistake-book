@@ -2446,6 +2446,14 @@ const SEED = [
     why:"只记住 hold 的常见义‘抓住’，没有把 hold + that 从句识别为正式的观点表达，导致词块无法提取。",
     fix:"看到 hold/holds 后面直接接 that 从句，优先判为观点动词‘认为、主张’，可替换为 argue/maintain/contend；不要按‘抓住’直译。"
   },
+  {
+    id: 278, subject:"英语", date:"2026-10-07",
+    q:"The timetable is subject to revision after the trial period.",
+    mine:"旨在复习",
+    right:"subject to revision = 可能被修改、须接受修订",
+    why:"没有把 be subject to 当作固定搭配，反而把 subject 按‘旨在/主题’理解；又把 revision 按‘复习’理解，导致整句方向错误。",
+    fix:"看到 be subject to 先整体识别，再看 to 后面的名词：approval/check → 须经批准/审查；change/revision → 可能变动/被修改；flooding/damage → 易受影响。revision 在这里是‘修订’，不是‘复习’。"
+  },
 
 ];
 
