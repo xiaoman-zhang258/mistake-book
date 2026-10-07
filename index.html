@@ -2526,15 +2526,6 @@ const SEED = [
     why:"把 regard 按‘考虑、顾及’理解，忽略了 with regard to 只是引出讨论对象，不表示因果或让步关系。",
     fix:"with regard to + 名词用于限定话题，等于 regarding/about/as for，译为‘关于……’或‘就……而言’。"
   },
-  {
-    id: 288, subject:"数学", date:"2026-10-07",
-    q:"把 2log₃a + 3log₃b − log₃c 合并成一个对数。",
-    mine:"log₃[(a²b³)/c³]",
-    right:"log₃(a²b³/c)",
-    why:"前两个正系数处理正确，但把最后的 −log₃c 误当成了 −3log₃c，导致分母写成 c³；没有把系数 −1 保留下来。",
-    fix:"逐项保留系数：klogₐM=logₐ(Mᵏ)。−log₃c=log₃(c⁻¹)=log₃(1/c)，所以乘除合并后分母只有 c；写完反向展开检查系数。"
-  },
-
 ];
 
 let data = load();
