@@ -2581,6 +2581,14 @@ const SEED = [
     why:"a few被译成“许多”，first-year把year误读成“五年”；as measured by的逻辑主语是前面的 improved performance，表示“这一表现通过……来衡量”，不是把data译成“被测量”。同时把定语从句和as短语的修饰关系压成了“加入了……的学生”。",
     fix:"翻译长句先锁主干：the students showed improved performance；再把插入修饰分层挂回去：who joined the program修饰students，which修饰program，as measured by修饰performance。看到 a few 译“少数”，first-year译“一年级”，as measured by译“通过……来衡量”。"
   },
+  {
+    id: 295, subject:"数学", date:"2026-10-09",
+    q:"利用周期性分别化简 sin(−7π/6) 和 cos(19π/6)，并把化简后的弧度角换成角度。",
+    mine:"第一题先写成 sin(5π/6)，却把 5π/6 认成 210°；第二题把 7π/6 认成 150°后又改正。",
+    right:"sin(−7π/6)=sin(5π/6)=sin(150°)=1/2；cos(19π/6)=cos(7π/6)=cos(210°)=−√3/2。",
+    why:"相邻的 5π/6 和 7π/6 都含有分母6，容易只凭象限结果倒猜角度，没有逐项用 π/6=30°换算；因此把 5π/6 与 7π/6 的角度对应弄反。",
+    fix:"弧度转角度固定按分子乘30°：5π/6=5×30°=150°，7π/6=7×30°=210°。先写换算行，再判断三角值，不能用记忆中的正负号反推角度。"
+  },
 
 ];
 
