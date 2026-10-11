@@ -2692,6 +2692,46 @@ const SEED = [
     why:"把括号内的常数π/6直接当成平移量，没有意识到水平平移量要先把 x 的系数提出，再看括号中的常数。",
     fix:"遇到 A sin(ωx＋b)＋k，先强制改写为 A sin[ω(x＋b/ω)]＋k；ω>0时，x＋c向左c，x−c向右c。平移距离是 b/ω，不是原式常数b。"
   },
+  {
+    id: 309, subject:"英语", date:"2026-10-11",
+    q:"The policy was successful insofar as it reduced short-term costs. 这里 insofar as 是什么意思？",
+    mine:"不会。",
+    right:"就……而言；在……程度上。",
+    why:"初测未能识别固定搭配，用户未提供具体错误推理。",
+    fix:"看到 insofar as + 从句，先译为“就……而言／在……程度上”，不要按单独的 so 或 far 拆译。"
+  },
+  {
+    id: 310, subject:"英语", date:"2026-10-11",
+    q:"The new transport system reduced traffic and, in turn, improved air quality. 这里 in turn 是什么意思？",
+    mine:"而且，加之（递进）。",
+    right:"进而；从而；前一结果带来后一结果。",
+    why:"抓到了递进方向，但没有识别出“前一结果导致后一结果”的承接关系。",
+    fix:"in turn 常表示“进而／从而／反过来又”，回看前后两个分句，判断后一结果是否由前一结果带来。"
+  },
+  {
+    id: 311, subject:"英语", date:"2026-10-11",
+    q:"The new software works in conjunction with the existing system. 这里 in conjunction with 是什么意思？",
+    mine:"不会。",
+    right:"与……结合；配合……一起。",
+    why:"初测未能识别固定搭配，用户未提供具体错误推理。",
+    fix:"in conjunction with + 名词表示“与……结合／配合……”，不要把 conjunction 单独按“连接”硬译。"
+  },
+  {
+    id: 312, subject:"英语", date:"2026-10-11",
+    q:"The policy is effective to the extent that it addresses the main cause of the problem. 这里 to the extent that 是什么意思？",
+    mine:"不会。",
+    right:"在……程度上；就……而言。",
+    why:"初测未能识别固定搭配，用户未提供具体错误推理。",
+    fix:"to the extent that + 从句表示“在……程度上／就……而言”，说明前面判断成立的范围或程度。"
+  },
+  {
+    id: 313, subject:"英语", date:"2026-10-11",
+    q:"The researchers changed the procedure with a view to reducing measurement errors. 这里 with a view to 是什么意思？",
+    mine:"为了，考虑到。",
+    right:"为了；旨在。",
+    why:"“为了”正确，但混入了“考虑到”的含义；with a view to 表目的，不表示依据或考虑因素。",
+    fix:"with a view to + doing 固定表示“为了／旨在”；“考虑到”要另看 in view of。"
+  },
 
 ];
 
