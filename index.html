@@ -636,7 +636,7 @@ const SEED = [
   {
     id: 51, subject:"化学", date:"2026-07-31",
     q:"判断 NaCl、BaSO4、H2O、CO2、HCl 在离子方程式中哪些要拆成离子，哪些不能拆。",
-    mine:"不会。",
+    mine:"初测不会；2026-10-12复测仍答‘不会’。",
     right:"NaCl、HCl 要拆；BaSO4、H2O、CO2 不能拆。强酸、强碱、可溶性盐拆；沉淀、气体、水、氧化物、单质、弱电解质不拆。",
     why:"没有把“能拆”和“不能拆”的对象按类别记住，导致离子方程式第一步无法判断。",
     fix:"口诀：强酸强碱可溶盐拆；沉淀气体水、氧化物单质弱电解质不拆。写离子方程式时先标状态和类别再决定拆不拆。"
@@ -2552,7 +2552,7 @@ const SEED = [
   {
     id: 291, subject:"英语", date:"2026-10-08",
     q:"The new program is geared toward helping beginners build confidence. 词块 be geared toward 的含义是什么？",
-    mine:"不会。",
+    mine:"初测不会；2026-10-12复测仍答‘不会’。",
     right:"旨在；针对；以……为目标。",
     why:"未识别固定搭配 be geared toward，未能从项目的目标对象推断其‘针对/旨在’义。",
     fix:"be geared toward + 目标/人群/用途 = ‘旨在……、针对……、以……为目标’，不要按 gear 的齿轮字面义猜。"
@@ -2695,41 +2695,41 @@ const SEED = [
   {
     id: 309, subject:"英语", date:"2026-10-11",
     q:"The policy was successful insofar as it reduced short-term costs. 这里 insofar as 是什么意思？",
-    mine:"不会。",
+    mine:"初测不会；2026-10-12复测仍答‘不会’。",
     right:"就……而言；在……程度上。",
-    why:"初测未能识别固定搭配，用户未提供具体错误推理。",
+    why:"初测与D+1复测都未能识别固定搭配，说明尚未形成稳定词义提取。",
     fix:"看到 insofar as + 从句，先译为“就……而言／在……程度上”，不要按单独的 so 或 far 拆译。"
   },
   {
     id: 310, subject:"英语", date:"2026-10-11",
     q:"The new transport system reduced traffic and, in turn, improved air quality. 这里 in turn 是什么意思？",
-    mine:"而且，加之（递进）。",
+    mine:"初测答‘而且、加之（递进）’；2026-10-12复测仍答‘加之’。",
     right:"进而；从而；前一结果带来后一结果。",
-    why:"抓到了递进方向，但没有识别出“前一结果导致后一结果”的承接关系。",
+    why:"两次都只抓到一般递进，没有识别出“前一结果导致后一结果”的承接关系。",
     fix:"in turn 常表示“进而／从而／反过来又”，回看前后两个分句，判断后一结果是否由前一结果带来。"
   },
   {
     id: 311, subject:"英语", date:"2026-10-11",
     q:"The new software works in conjunction with the existing system. 这里 in conjunction with 是什么意思？",
-    mine:"不会。",
+    mine:"初测不会；2026-10-12复测仍答‘不会’。",
     right:"与……结合；配合……一起。",
-    why:"初测未能识别固定搭配，用户未提供具体错误推理。",
+    why:"初测与D+1复测都未能识别固定搭配，说明尚未形成稳定词义提取。",
     fix:"in conjunction with + 名词表示“与……结合／配合……”，不要把 conjunction 单独按“连接”硬译。"
   },
   {
     id: 312, subject:"英语", date:"2026-10-11",
     q:"The policy is effective to the extent that it addresses the main cause of the problem. 这里 to the extent that 是什么意思？",
-    mine:"不会。",
+    mine:"初测不会；2026-10-12复测答‘为了拓展’。",
     right:"在……程度上；就……而言。",
-    why:"初测未能识别固定搭配，用户未提供具体错误推理。",
+    why:"初测未能识别固定搭配，复测又把它误判成目的表达，未抓住‘在……程度上’的范围含义。",
     fix:"to the extent that + 从句表示“在……程度上／就……而言”，说明前面判断成立的范围或程度。"
   },
   {
     id: 313, subject:"英语", date:"2026-10-11",
     q:"The researchers changed the procedure with a view to reducing measurement errors. 这里 with a view to 是什么意思？",
-    mine:"为了，考虑到。",
+    mine:"初测答‘为了、考虑到’；2026-10-12复测答‘考虑到’。",
     right:"为了；旨在。",
-    why:"“为了”正确，但混入了“考虑到”的含义；with a view to 表目的，不表示依据或考虑因素。",
+    why:"把表示目的的词块与表示依据/考虑因素的表达混淆；复测仍把它答成‘考虑到’。",
     fix:"with a view to + doing 固定表示“为了／旨在”；“考虑到”要另看 in view of。"
   },
   {
@@ -2746,6 +2746,14 @@ const SEED = [
     right:"cos x=−1/2 的参考角是 π/3，因为 cos(π/3)=1/2；余弦为负在第二、第三象限，所以 x=2π/3 或 4π/3。也可取 a=2π/3，用 x=±a+2nπ 筛选。",
     why:"把 150°对应的余弦值 −√3/2 与 −1/2 混淆，同时把 150°当成了参考角；在复合题中没有先锁定 |cos|=1/2 对应的 π/3，再按余弦负号选第二、第三象限。",
     fix:"先锁定绝对值：|cos x|=1/2 对应参考角 π/3；再看符号：cos为负→对应角 2π/3、4π/3；复合题先令整体角等于这两个角再解 x。遇到特殊角先核对 30°、45°、60° 的三角值，不凭图形猜。"
+  },
+  {
+    id: 316, subject:"英语", date:"2026-10-12",
+    q:"All applicants will be assessed in accordance with the same criteria. 判断 in accordance with 的词义。",
+    mine:"答成‘与……一致’。",
+    right:"根据；按照；依照。句中表示按照同一套标准进行评估。",
+    why:"把 in accordance with 与表示‘与……一致’的 in keeping with 混淆，看到语境中的 same criteria 后没有抓住‘依据/按照’关系。",
+    fix:"in accordance with + 标准、规则、法律、指南时，固定先译为‘按照/根据/依照’；‘与……一致’优先考虑 in keeping with 或 be consistent with。"
   },
 
 ];
