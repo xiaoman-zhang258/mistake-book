@@ -2755,6 +2755,14 @@ const SEED = [
     why:"把 in accordance with 与表示‘与……一致’的 in keeping with 混淆，看到语境中的 same criteria 后没有抓住‘依据/按照’关系。",
     fix:"in accordance with + 标准、规则、法律、指南时，固定先译为‘按照/根据/依照’；‘与……一致’优先考虑 in keeping with 或 be consistent with。"
   },
+  {
+    id: 317, subject:"化学", date:"2026-10-12",
+    q:"向含0.10 mol AlCl₃的溶液中加入0.35 mol NaOH，利用Al(OH)₃两性求最终沉淀量。",
+    mine:"把第一阶段消耗的0.30 mol OH⁻误认为生成了0.30 mol Al(OH)₃沉淀，再减去0.05 mol，得0.25 mol。",
+    right:"第一阶段0.10 mol Al³⁺与0.30 mol OH⁻按1:3生成0.10 mol Al(OH)₃；剩余0.05 mol OH⁻再按1:1溶解0.05 mol沉淀，最终剩余0.05 mol Al(OH)₃。",
+    why:"没有区分反应物OH⁻与生成物Al(OH)₃的物质的量，忽略了第一步Al³⁺:OH⁻:Al(OH)₃=1:3:1的计量关系。",
+    fix:"分段时分别记账：先用Al³⁺的量确定最大沉淀量；再用剩余OH⁻按1:1扣除沉淀。先写两条方程式和比例，不能把0.30 mol OH⁻直接当沉淀量。"
+  },
 
 ];
 
