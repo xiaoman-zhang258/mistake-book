@@ -2798,9 +2798,9 @@ const SEED = [
   {
     id: 322, subject:"英语", date:"2026-10-13",
     q:"A lack of trust often underlies conflicts between different groups. 解释 underlie。",
-    mine:"信任危机；2026-10-18在新句中答‘是……的关键’。",
+    mine:"信任危机；2026-10-18在新句中答‘是……的关键’；2026-10-25答‘基于’，把 underlie 的方向译反。",
     right:"构成……的基础；是……的根源。整句是“缺乏信任常常是不同群体之间冲突的根源”。",
-    why:"抓到了 trust 的语义，却没有识别 underlie 作为动词表示‘在……之下构成基础／导致某现象的根源’；本次虽抓到重要性方向，但‘关键’仍没有落到‘构成基础/根源’这一关系。",
+    why:"抓到了 trust 的语义，却没有识别 underlie 作为动词表示‘在……之下构成基础／导致某现象的根源’；本次把‘基于’当成译法，方向倒置，仍未落到‘构成基础/根源’这一关系。",
     fix:"underlie + 现象/问题＝构成其基础或根源；先找主语是什么，再问‘它是后面现象的什么根源’，答案固定落成‘是……的根源/构成……的基础’，不要只说‘关键’。"
   },
   {
@@ -3082,6 +3082,22 @@ const SEED = [
     right:"因为 AP:AB=1:3，所以 P=A+(1/3)(B−A)=(1，2)+(1/3)(6，6)=(3，4)。等价地，P=(2A+B)/3。",
     why:"记住了总份数 3，却没有把内分比转成“从 A 出发走 AB 的 1/3”，也漏用了交叉权重。",
     fix:"内分点先走位移：P=A+[m/(m+n)](B−A)。只有需要时再展开成 P=(nA+mB)/(m+n)，并检查 P 是否更靠近对应端点。"
+  },
+  {
+    id: 358, subject:"英语", date:"2026-10-25",
+    q:"Regular feedback is integral to effective learning. 解释 be integral to。",
+    mine:"与……结合。",
+    right:"是有效学习不可分割的一部分；对有效学习不可或缺。",
+    why:"把 integral to 当成普通“结合”，没有识别它表示核心组成部分，少了该要素整体就不完整。",
+    fix:"A is integral to B＝A 是 B 不可分割的一部分/对 B 不可或缺；看到 integral to 后面接 learning、trust、partnership 等整体目标时，不译成普通“结合”。"
+  },
+  {
+    id: 359, subject:"英语", date:"2026-10-25",
+    q:"Prolonged sleep deprivation can be detrimental to memory. 解释 be detrimental to。",
+    mine:"对做某事有决心。",
+    right:"对记忆有害；对记忆不利。",
+    why:"没有识别 detrimental to 的负面评价义，把词块误解成表示积极意愿的“有决心”。",
+    fix:"be detrimental to B＝对 B 有害/不利；看到 detrimental 后面接 memory、health、concentration 等受影响对象，先判断为负面影响。"
   },
 
 ];
