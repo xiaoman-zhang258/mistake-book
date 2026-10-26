@@ -2790,7 +2790,7 @@ const SEED = [
   {
     id: 321, subject:"英语", date:"2026-10-13",
     q:"Whether the plan succeeds is contingent on the availability of enough funding. 解释 be contingent on。",
-    mine:"不会",
+    mine:"不会；2026-10-26答‘与……紧密结合’，把取决关系误作普通结合。",
     right:"取决于；以……为条件。",
     why:"没有识别固定搭配，把 contingent on 当作未掌握的整体。",
     fix:"记作 be contingent on A＝取决于A／以A为条件；看到 whether... succeeds is contingent on...，先找决定结果的条件。"
@@ -2798,7 +2798,7 @@ const SEED = [
   {
     id: 322, subject:"英语", date:"2026-10-13",
     q:"A lack of trust often underlies conflicts between different groups. 解释 underlie。",
-    mine:"信任危机；2026-10-18在新句中答‘是……的关键’；2026-10-25答‘基于’，把 underlie 的方向译反。",
+    mine:"信任危机；2026-10-18在新句中答‘是……的关键’；2026-10-25答‘基于’，把 underlie 的方向译反；2026-10-26无提示答‘是……的根源’，纠正通过。",
     right:"构成……的基础；是……的根源。整句是“缺乏信任常常是不同群体之间冲突的根源”。",
     why:"抓到了 trust 的语义，却没有识别 underlie 作为动词表示‘在……之下构成基础／导致某现象的根源’；本次把‘基于’当成译法，方向倒置，仍未落到‘构成基础/根源’这一关系。",
     fix:"underlie + 现象/问题＝构成其基础或根源；先找主语是什么，再问‘它是后面现象的什么根源’，答案固定落成‘是……的根源/构成……的基础’，不要只说‘关键’。"
@@ -2878,7 +2878,7 @@ const SEED = [
   {
     id: 332, subject:"英语", date:"2026-10-19",
     q:"The new policy reduced unnecessary paperwork and, in turn, allowed teachers to spend more time helping students individually. in turn 在句中是什么意思？",
-    mine:"而且；2026-10-20复测答‘而且，表递进’",
+    mine:"而且；2026-10-20复测答‘而且，表递进’；2026-10-26再次答‘加之，而且’。",
     right:"进而；从而；反过来又……。这里表示前一结果带来后一结果。",
     why:"把表示因果推进的 in turn 当成普通并列递进的“而且”，没有抓住前件导致后件的关系；2026-10-20复测仍未落成‘进而/从而’。",
     fix:"看到 in turn 先问：前面的动作或结果是否带来了后面的结果？若是，译为“进而/从而”；只有表示轮流时才译为“轮流”。"
@@ -2886,7 +2886,7 @@ const SEED = [
   {
     id: 333, subject:"英语", date:"2026-10-19",
     q:"Local volunteers were instrumental in organizing the relief effort. be instrumental in 在句中是什么意思？",
-    mine:"是……的基本；2026-10-20复测答‘……的关键’",
+    mine:"是……的基本；2026-10-20复测答‘……的关键’；2026-10-26无提示答‘在……中起至关重要作用’，本轮通过。",
     right:"在……中起关键作用；对……有重要作用。",
     why:"只抓到 instrumental 的“基本/工具”联想，没有识别 be instrumental in 表示某人或某事对结果发挥了重要作用；复测时虽抓到‘关键’，仍未译出‘在……中起关键作用’。",
     fix:"固定记作 be instrumental in doing sth＝在做某事中起关键作用；主语通常是人、措施或因素，不译成“是……的基本”。"
@@ -2910,7 +2910,7 @@ const SEED = [
   {
     id: 336, subject:"英语", date:"2026-10-19",
     q:"Her early research was pivotal in shaping the field of environmental economics. be pivotal in 在句中是什么意思？",
-    mine:"不会；2026-10-20复测答‘取决于’",
+    mine:"不会；2026-10-20复测答‘取决于’；2026-10-26又答‘不会’。",
     right:"在……中起关键作用；对……至关重要。",
     why:"没有识别 pivotal 表示关键性的作用，未能把 research 与 shaping the field 的因果影响联系起来；2026-10-20复测又误判为‘取决于’。",
     fix:"固定为 be pivotal in doing sth＝在做某事中起关键作用；主语通常是发现、决定、研究或事件。"
@@ -2918,7 +2918,7 @@ const SEED = [
   {
     id: 337, subject:"英语", date:"2026-10-19",
     q:"The theory is grounded in evidence from long-term observations. be grounded in 在句中是什么意思？",
-    mine:"不会；2026-10-20复测答‘以……为理由’",
+    mine:"不会；2026-10-20复测答‘以……为理由’；2026-10-26无提示答‘以……为依据’，本轮通过。",
     right:"以……为依据；建立在……基础上。",
     why:"没有识别 grounded in 表示理论、决定或政策的依据来源；2026-10-20复测与 on the grounds that（以……为理由）混淆。",
     fix:"看到 theory/decision/policy be grounded in + evidence/facts/experience，译为“以……为依据/建立在……基础上”。"
@@ -2974,7 +2974,7 @@ const SEED = [
   {
     id: 344, subject:"英语", date:"2026-10-22",
     q:"The proposal is predicated on the assumption that all students have internet access. 解释 be predicated on。",
-    mine:"对……很关键。",
+    mine:"对……很关键；2026-10-26答‘在……中很重要’，仍未落到‘建立在……基础上’。",
     right:"以……为前提；建立在……基础上。",
     why:"把 predicated on 与 pivotal in 的‘关键’意义混淆，没有抓住 proposal is predicated on 后面接 assumption，表示方案成立所依赖的前提。",
     fix:"看到 be predicated on + assumption/belief/evidence，先问‘这个方案/论点建立在什么前提上’，译为‘以……为前提/基础’；不要与 be pivotal in 混淆。"
