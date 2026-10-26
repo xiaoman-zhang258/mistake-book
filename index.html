@@ -3147,6 +3147,14 @@ const SEED = [
     why:"未识别 lend credibility to 的固定搭配，未把独立研究结果与理论可信度增加的关系提取出来。",
     fix:"evidence/results lend credibility to + theory/claim = 证据或结果为某观点增加可信性；lend 在这里不是借出实物。"
   },
+  {
+    id: 366, subject:"物理", date:"2026-10-26",
+    q:"已知位移 x(t)＝t³−2t，速度 v＝dx/dt，写出 v(t)。",
+    mine:"用户回答‘怎么搞 我忘了’，未能回忆导数规则。",
+    right:"v(t)＝3t²−2，因为 d(t³)/dt＝3t²，d(−2t)/dt＝−2。",
+    why:"上次只形成了对导数的初步理解，但幂函数求导规则没有经过间隔复测，导致看到 dx/dt 时无法从位移变化率联想到逐项求导。",
+    fix:"看到 v＝dx/dt，先把位移表达式逐项求导：d(tⁿ)/dt＝n tⁿ⁻¹，常数倍保留，常数项导数为0；求完用单位检查，速度应是位移/时间。"
+  },
 
 ];
 
