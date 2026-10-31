@@ -2703,7 +2703,7 @@ const SEED = [
   {
     id: 310, subject:"英语", date:"2026-10-11",
     q:"The new transport system reduced traffic and, in turn, improved air quality. 这里 in turn 是什么意思？",
-    mine:"初测答‘而且、加之（递进）’；2026-10-12复测仍答‘加之’。",
+    mine:"初测答‘而且、加之（递进）’；2026-10-12复测仍答‘加之’；2026-10-31答‘进而，加之’，仍混入错误义项。",
     right:"进而；从而；前一结果带来后一结果。",
     why:"两次都只抓到一般递进，没有识别出“前一结果导致后一结果”的承接关系。",
     fix:"in turn 常表示“进而／从而／反过来又”，回看前后两个分句，判断后一结果是否由前一结果带来。"
@@ -2830,7 +2830,7 @@ const SEED = [
   {
     id: 323, subject:"英语", date:"2026-10-13",
     q:"The results are at odds with the researchers’ original prediction. 解释 be at odds with。",
-    mine:"个例",
+    mine:"个例；2026-10-31答‘罕见’。",
     right:"与……不一致；与……相冲突。",
     why:"没有识别 at odds with 的固定搭配，把 odds 的熟悉义项方向带偏。",
     fix:"整体记 be at odds with A＝与A不一致／相冲突；看到 results与prediction对照时，优先判断“结果和预测不一致”。"
@@ -3086,7 +3086,7 @@ const SEED = [
   {
     id: 358, subject:"英语", date:"2026-10-25",
     q:"Regular feedback is integral to effective learning. 解释 be integral to。",
-    mine:"与……结合。",
+    mine:"与……结合；2026-10-31仍答‘与……结合’。",
     right:"是有效学习不可分割的一部分；对有效学习不可或缺。",
     why:"把 integral to 当成普通“结合”，没有识别它表示核心组成部分，少了该要素整体就不完整。",
     fix:"A is integral to B＝A 是 B 不可分割的一部分/对 B 不可或缺；看到 integral to 后面接 learning、trust、partnership 等整体目标时，不译成普通“结合”。"
@@ -3094,7 +3094,7 @@ const SEED = [
   {
     id: 359, subject:"英语", date:"2026-10-25",
     q:"Prolonged sleep deprivation can be detrimental to memory. 解释 be detrimental to。",
-    mine:"对做某事有决心。",
+    mine:"对做某事有决心；纠正后曾答‘对……有害’；2026-10-31又答‘有利于’。",
     right:"对记忆有害；对记忆不利。",
     why:"没有识别 detrimental to 的负面评价义，把词块误解成表示积极意愿的“有决心”。",
     fix:"be detrimental to B＝对 B 有害/不利；看到 detrimental 后面接 memory、health、concentration 等受影响对象，先判断为负面影响。"
@@ -3134,7 +3134,7 @@ const SEED = [
   {
     id: 364, subject:"英语", date:"2026-10-26",
     q:"The analysis failed to factor in differences in students’ prior knowledge. 解释 factor in。",
-    mine:"挖掘……的因素。",
+    mine:"挖掘……的因素；2026-10-31答‘揭示’。",
     right:"把……考虑在内；将……纳入计算或判断。",
     why:"把 factor in 的‘把某因素算进去’误解成寻找、挖掘因素，混淆了纳入考虑和发现因素。",
     fix:"factor in + 条件/差异/成本 = 在分析或决定时把它考虑进去；可与 take into account 对照记忆。"
@@ -3205,7 +3205,7 @@ const SEED = [
   {
     id: 373, subject:"英语", date:"2026-10-29",
     q:"in turn 在句子中表示什么逻辑关系？",
-    mine:"加之，更进一步地说",
+    mine:"加之，更进一步地说；2026-10-31答‘进而，加之’，仍混入错误义项。",
     right:"进而、从而，表示前一结果进一步导致后一结果。",
     why:"把有因果推进关系的 in turn 当成普通递进或补充，忽略了前项结果是后项原因。",
     fix:"看到 A and, in turn, B，先检查是否是“A 导致 B”；译为“进而/从而”，不要译成“而且/加之”。"
@@ -3213,7 +3213,7 @@ const SEED = [
   {
     id: 374, subject:"英语", date:"2026-10-29",
     q:"be predicated on 在句中表示什么？",
-    mine:"对……至关重要",
+    mine:"对……至关重要；2026-10-31此项独立答对。",
     right:"建立在……基础上；以……为依据。",
     why:"把表示“成立基础”的 predicated on 与表示重要性的 pivotal/fundamental 混淆。",
     fix:"记住主语通常是 proposal、argument、policy；后面的内容是它成立所依赖的基础，不是它的重要性。"
@@ -3221,7 +3221,7 @@ const SEED = [
   {
     id: 375, subject:"英语", date:"2026-10-29",
     q:"hold off on 表示什么？",
-    mine:"考虑到",
+    mine:"考虑到；2026-10-31独立答对‘推迟’，但此前多次复发。",
     right:"推迟、暂缓做某事。",
     why:"没有抓住 hold off 的“往后挡住/暂不进行”方向，把它与表示原因或依据的表达混淆。",
     fix:"hold off on＋名词/动名词＝先不做、等条件成熟再做；看到 until 时尤其优先判断为“推迟”。"
@@ -3229,7 +3229,7 @@ const SEED = [
   {
     id: 376, subject:"英语", date:"2026-10-29",
     q:"factor in 表示什么？",
-    mine:"揭示原因",
+    mine:"揭示原因；2026-10-31仍答‘揭示’。",
     right:"把某因素考虑在内；纳入分析或判断。",
     why:"把 factor 当成“因素/原因”后，误把 factor in 理解为寻找或揭示原因，没有识别 in 表示纳入。",
     fix:"factor in＋条件/差异/成本＝在决定时把它算进去；可替换为 take into account。"
@@ -3237,11 +3237,35 @@ const SEED = [
   {
     id: 377, subject:"英语", date:"2026-10-29",
     q:"run the risk of 表示什么？",
-    mine:"直面……的困难",
+    mine:"直面……的困难；2026-10-31仍答‘直面……的风险’。",
     right:"冒……的风险；面临……的危险，常含因某行为导致不良后果的关系。",
     why:"把 risk 直接泛化成困难，漏掉“危险/不良后果”以及行为带来风险的因果关系。",
     fix:"run the risk of＋doing＝因为做某事而冒着发生某坏结果的风险，不是单纯面对困难。"
+  },  {
+    id: 378, subject:"英语", date:"2026-10-31",
+    q:"This file format is not compatible with the school’s outdated software. 解释 be compatible with。",
+    mine:"取决于",
+    right:"与……兼容；与……相容，能够一起使用而不冲突。",
+    why:"把 compatible with 的“能兼容/相容”误判成表示条件依赖的“取决于”，混淆了兼容关系和依赖关系。",
+    fix:"be compatible with A＝能与 A 一起使用/与 A 相容；看到 software、system、device 或 policy 等对象时，先问“能不能共存或一起运行”，不要译成“取决于”。"
   },
+  {
+    id: 379, subject:"英语", date:"2026-10-31",
+    q:"The researcher eventually conceded that the original explanation was incomplete. 解释 concede that。",
+    mine:"不会",
+    right:"承认；勉强承认（通常是承认原先不愿承认的事实）。",
+    why:"没有识别 concede that 的固定结构，未能从 that 从句判断其“承认事实”的观点义。",
+    fix:"concede that + 从句＝承认后面的事实成立，常带“让步、不得不承认”的语气；不要只按 concede 的陌生感判不会。"
+  },
+  {
+    id: 380, subject:"英语", date:"2026-10-31",
+    q:"The unexpected result prompted the team to repeat the experiment. 解释 prompt sb to do sth。",
+    mine:"提供新视角",
+    right:"促使/导致某人做某事。",
+    why:"没有识别 prompt + 人 + to do 的使动结构，把“引发行动”误作“提供观点或视角”。",
+    fix:"prompt sb to do＝某事促使某人采取后面的动作；看到 to repeat 这类动词原形结构，先找“谁被促使做什么”。"
+  },
+
 ];
 
 let data = load();
